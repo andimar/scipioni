@@ -149,9 +149,12 @@ class _DemoShellState extends State<DemoShell> {
 
   @override
   Widget build(BuildContext context) {
+    final selectedEventIndex = _events.isEmpty
+        ? 0
+        : (_selectedEventIndex.clamp(0, _events.length - 1) as int);
     final currentEvent = _events.isEmpty
         ? null
-        : _events[_selectedEventIndex.clamp(0, _events.length - 1)];
+        : _events[selectedEventIndex];
 
     final pages = [
       _HomePage(
@@ -483,7 +486,7 @@ class _EventsPage extends StatelessWidget {
       return const Center(child: Text('Nessun evento disponibile.'));
     }
 
-    final current = events[selectedIndex.clamp(0, events.length - 1)];
+    final current = events[selectedIndex.clamp(0, events.length - 1) as int];
     return LayoutBuilder(
       builder: (context, constraints) {
         final stacked = constraints.maxWidth < 980;
