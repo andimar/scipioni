@@ -61,8 +61,8 @@ Nei file Nginx si definiscono soprattutto:
 
 Esempio staging:
 
-- frontend: `staging.example.com`
-- api: `api-staging.example.com`
+- frontend: `staging.scipioni.brane.it`
+- api: `api-staging.scipioni.brane.it`
 
 Esempio produzione:
 

@@ -23,8 +23,8 @@ Per Hetzner la soluzione piu semplice e robusta, in questa fase, e `Caddy`:
 
 Staging:
 
-- `staging.example.com` -> `frontend-demo`
-- `api-staging.example.com` -> `nginx`
+- `staging.scipioni.brane.it` -> `frontend-demo`
+- `api-staging.scipioni.brane.it` -> `nginx`
 
 Produzione:
 
@@ -36,8 +36,8 @@ Produzione:
 Prima del deploy reale sostituisci i placeholder:
 
 - `devops@example.com`
-- `staging.example.com`
-- `api-staging.example.com`
+- `staging.scipioni.brane.it`
+- `api-staging.scipioni.brane.it`
 - `app.example.com`
 - `api.example.com`
 

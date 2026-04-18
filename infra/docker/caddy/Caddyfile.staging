@@ -7,7 +7,7 @@ staging.scipioni.brane.it {
     reverse_proxy frontend-demo:80
 }
 
-api-staging.brane.it {
+api-staging.scipioni.brane.it {
     encode zstd gzip
     reverse_proxy nginx:80
 }
