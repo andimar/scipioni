@@ -3,6 +3,12 @@ services:
     ports: []
 
   frontend-demo:
+    build:
+      context: .
+      dockerfile: infra/docker/frontend-demo/Dockerfile
+      args:
+        SCIPIONI_API_BASE_URL: https://api.example.com/api/v1
+    volumes: []
     ports: []
 
   mysql:

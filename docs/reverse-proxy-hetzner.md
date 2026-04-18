@@ -12,12 +12,19 @@ Per Hetzner la soluzione piu semplice e robusta, in questa fase, e `Caddy`:
 - semplifica la gestione dei virtual host
 - resta separato da Nginx applicativo
 
+Per il frontend demo, nei compose server viene usata una build Docker autonoma:
+
+- il server non ha bisogno di Flutter installato
+- l'immagine `frontend-demo` compila Flutter Web durante la `docker build`
+- il risultato viene servito poi da Nginx nello stage finale
+
 ## File principali
 
 - [Caddyfile.staging](/C:/dev/scipioni/infra/docker/caddy/Caddyfile.staging)
 - [Caddyfile.production](/C:/dev/scipioni/infra/docker/caddy/Caddyfile.production)
 - [docker-compose.edge.staging.yml](/C:/dev/scipioni/docker-compose.edge.staging.yml)
 - [docker-compose.edge.production.yml](/C:/dev/scipioni/docker-compose.edge.production.yml)
+- [frontend Dockerfile](/C:/dev/scipioni/infra/docker/frontend-demo/Dockerfile)
 
 ## Routing
 
@@ -96,6 +103,7 @@ Questi override:
 - rimuovono l'esposizione pubblica di `frontend-demo`
 - rimuovono l'esposizione pubblica di `mysql`
 - escludono `adminer` dall'uso server normale tramite profilo `local-only`
+- fanno buildare il frontend demo direttamente sul server via Docker
 
 In questo assetto, lato pubblico restano esposte solo:
 

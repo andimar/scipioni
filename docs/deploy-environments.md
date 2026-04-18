@@ -37,6 +37,10 @@ Per il deploy server-only sono disponibili anche:
 - [docker-compose.server.staging.yml](/C:/dev/scipioni/docker-compose.server.staging.yml)
 - [docker-compose.server.production.yml](/C:/dev/scipioni/docker-compose.server.production.yml)
 
+Negli override server il servizio `frontend-demo` viene buildato dal sorgente tramite:
+
+- [infra/docker/frontend-demo/Dockerfile](/C:/dev/scipioni/infra/docker/frontend-demo/Dockerfile)
+
 ### Nginx
 
 Backend API:
