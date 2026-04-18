@@ -1,0 +1,96 @@
+# Deploy Environments
+
+## Obiettivo
+
+Separare chiaramente sviluppo locale, staging e produzione per backend Laravel e demo/frontend web.
+
+## File di configurazione
+
+### Backend
+
+- [backend/.env.docker](/C:/dev/scipioni/backend/.env.docker)
+- [backend/.env.staging](/C:/dev/scipioni/backend/.env.staging)
+- [backend/.env.production](/C:/dev/scipioni/backend/.env.production)
+
+Qui vanno definiti:
+
+- `APP_URL`
+- `CORS_ALLOWED_ORIGINS`
+- credenziali DB
+- livello log
+- chiavi applicative
+
+### Docker Compose
+
+- [docker-compose.yml](/C:/dev/scipioni/docker-compose.yml)
+- [docker-compose.staging.yml](/C:/dev/scipioni/docker-compose.staging.yml)
+- [docker-compose.production.yml](/C:/dev/scipioni/docker-compose.production.yml)
+
+Il file base contiene i servizi comuni. Gli override di staging e production servono a:
+
+- cambiare `env_file`
+- agganciare config Nginx specifiche per dominio
+- mantenere separazione tra ambienti
+
+Per il deploy server-only sono disponibili anche:
+
+- [docker-compose.server.staging.yml](/C:/dev/scipioni/docker-compose.server.staging.yml)
+- [docker-compose.server.production.yml](/C:/dev/scipioni/docker-compose.server.production.yml)
+
+### Nginx
+
+Backend API:
+
+- [default.conf](/C:/dev/scipioni/infra/docker/nginx/default.conf)
+- [staging-api.conf](/C:/dev/scipioni/infra/docker/nginx/staging-api.conf)
+- [production-api.conf](/C:/dev/scipioni/infra/docker/nginx/production-api.conf)
+
+Frontend demo:
+
+- [nginx.conf](/C:/dev/scipioni/infra/docker/frontend-demo/nginx.conf)
+- [staging.conf](/C:/dev/scipioni/infra/docker/frontend-demo/staging.conf)
+- [production.conf](/C:/dev/scipioni/infra/docker/frontend-demo/production.conf)
+
+Nei file Nginx si definiscono soprattutto:
+
+- `server_name`
+- eventuali redirect
+- comportamento frontend SPA
+
+## Domini
+
+Esempio staging:
+
+- frontend: `staging.example.com`
+- api: `api-staging.example.com`
+
+Esempio produzione:
+
+- frontend: `app.example.com`
+- api: `api.example.com`
+
+Sostituisci questi placeholder con i domini reali del progetto.
+
+## Avvio
+
+Staging:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.staging.yml up -d
+```
+
+Produzione:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.production.yml up -d
+```
+
+## Nota importante
+
+Questa struttura non gestisce ancora automaticamente:
+
+- la rimozione completa delle porte pubbliche dei servizi interni
+
+Per Hetzner, il reverse proxy edge con TLS e' stato predisposto in:
+
+- [docs/reverse-proxy-hetzner.md](/C:/dev/scipioni/docs/reverse-proxy-hetzner.md)

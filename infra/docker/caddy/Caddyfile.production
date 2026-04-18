@@ -1,0 +1,13 @@
+{
+    email devops@example.com
+}
+
+app.example.com {
+    encode zstd gzip
+    reverse_proxy frontend-demo:80
+}
+
+api.example.com {
+    encode zstd gzip
+    reverse_proxy nginx:80
+}

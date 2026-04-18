@@ -1,0 +1,17 @@
+services:
+  edge:
+    image: caddy:2.10
+    container_name: scipioni-edge-production
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./infra/docker/caddy/Caddyfile.production:/etc/caddy/Caddyfile:ro
+      - ./infra/data/caddy/production/data:/data
+      - ./infra/data/caddy/production/config:/config
+    depends_on:
+      - nginx
+      - frontend-demo
+    networks:
+      - scipioni-network

@@ -1,0 +1,17 @@
+services:
+  edge:
+    image: caddy:2.10
+    container_name: scipioni-edge-staging
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./infra/docker/caddy/Caddyfile.staging:/etc/caddy/Caddyfile:ro
+      - ./infra/data/caddy/staging/data:/data
+      - ./infra/data/caddy/staging/config:/config
+    depends_on:
+      - nginx
+      - frontend-demo
+    networks:
+      - scipioni-network

@@ -1,0 +1,13 @@
+services:
+  nginx:
+    ports: []
+
+  frontend-demo:
+    ports: []
+
+  mysql:
+    ports: []
+
+  adminer:
+    profiles: ["local-only"]
+    ports: []
