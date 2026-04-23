@@ -17,7 +17,7 @@ class ApiEvent {
   factory ApiEvent.fromJson(Map<String, dynamic> json) {
     final category = json['category'] as Map<String, dynamic>?;
     return ApiEvent(
-      id: json['id'] as int,
+      id: _asInt(json['id']),
       title: (json['title'] ?? '') as String,
       subtitle: (json['subtitle'] ?? '') as String,
       summary: (json['short_description'] ?? '') as String,
@@ -25,12 +25,25 @@ class ApiEvent {
       categoryName: (category?['name'] ?? 'Evento') as String,
       startsAt: DateTime.tryParse((json['starts_at'] ?? '') as String),
       venueName: (json['venue_name'] ?? '') as String,
-      availableSeats: (json['available_seats'] ?? 0) as int,
-      price: ((json['price'] ?? 0) as num).toDouble(),
+      availableSeats: _asInt(json['available_seats']),
+      price: _asDouble(json['price']),
       bookingStatus: (json['booking_status'] ?? 'open') as String,
       isFeatured: (json['is_featured'] ?? false) as bool,
     );
   }
+
+  final int id;
+  final String title;
+  final String subtitle;
+  final String summary;
+  final String description;
+  final String categoryName;
+  final DateTime? startsAt;
+  final String venueName;
+  final int availableSeats;
+  final double price;
+  final String bookingStatus;
+  final bool isFeatured;
 }
 
 class ApiUserProfile {
@@ -82,7 +95,7 @@ class ApiUser {
 
   factory ApiUser.fromJson(Map<String, dynamic> json) {
     return ApiUser(
-      id: json['id'] as int,
+      id: _asInt(json['id']),
       fullName: (json['full_name'] ?? '') as String,
       email: (json['email'] ?? '') as String,
       phone: (json['phone'] ?? '') as String,
@@ -108,9 +121,9 @@ class ApiBooking {
 
   factory ApiBooking.fromJson(Map<String, dynamic> json) {
     return ApiBooking(
-      id: json['id'] as int,
+      id: _asInt(json['id']),
       status: (json['status'] ?? '') as String,
-      seatsReserved: (json['seats_reserved'] ?? 1) as int,
+      seatsReserved: _asInt(json['seats_reserved'], fallback: 1),
       createdAt: DateTime.tryParse((json['created_at'] ?? '') as String),
       event: ApiEvent.fromJson(json['event'] as Map<String, dynamic>),
     );
@@ -131,4 +144,24 @@ class LoginResult {
 
   final String token;
   final ApiUser user;
+}
+
+int _asInt(Object? value, {int fallback = 0}) {
+  if (value is int) {
+    return value;
+  }
+  if (value is num) {
+    return value.toInt();
+  }
+  return int.tryParse(value?.toString() ?? '') ?? fallback;
+}
+
+double _asDouble(Object? value, {double fallback = 0}) {
+  if (value is double) {
+    return value;
+  }
+  if (value is num) {
+    return value.toDouble();
+  }
+  return double.tryParse(value?.toString() ?? '') ?? fallback;
 }
