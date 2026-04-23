@@ -14,16 +14,16 @@ echo [staging] Verifico database applicativo...
 docker compose %COMPOSE_FILES% exec -T mysql mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS scipioni_club CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 if errorlevel 1 goto :error
 
-echo [staging] Pulizia cache applicativa...
-docker compose %COMPOSE_FILES% exec -T app php artisan optimize:clear
-if errorlevel 1 goto :error
-
 echo [staging] Eseguo migrazioni...
 docker compose %COMPOSE_FILES% exec -T app php artisan migrate --force
 if errorlevel 1 goto :error
 
 echo [staging] Carico dati demo...
 docker compose %COMPOSE_FILES% exec -T app php artisan db:seed --force
+if errorlevel 1 goto :error
+
+echo [staging] Pulizia cache applicativa...
+docker compose %COMPOSE_FILES% exec -T app php artisan optimize:clear
 if errorlevel 1 goto :error
 
 echo [staging] Stato servizi:

@@ -89,7 +89,7 @@ Per il bootstrap staging completo con rebuild, migrazioni e dati demo:
 ./ops/staging-demo-setup.sh
 ```
 
-Lo script crea anche il database `scipioni_club` se manca, utile quando il volume MySQL esiste gia' ma non e' stato inizializzato con `MYSQL_DATABASE`.
+Lo script crea anche il database `scipioni_club` se manca, esegue le migrazioni, carica i dati demo e solo dopo pulisce la cache applicativa. Questo evita errori su `cache` quando il database o le tabelle non esistono ancora.
 
 Da Windows e PowerShell e' disponibile anche:
 
