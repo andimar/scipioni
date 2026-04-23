@@ -1,19 +1,20 @@
 services:
   nginx:
-    ports: []
+    ports: !reset []
 
   frontend-demo:
+    image: scipioni-frontend-demo:production
     build:
       context: .
       dockerfile: infra/docker/frontend-demo/Dockerfile
       args:
         SCIPIONI_API_BASE_URL: https://api.example.com/api/v1
-    volumes: []
-    ports: []
+    volumes: !reset []
+    ports: !reset []
 
   mysql:
-    ports: []
+    ports: !reset []
 
   adminer:
     profiles: ["local-only"]
-    ports: []
+    ports: !reset []

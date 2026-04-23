@@ -112,6 +112,7 @@ Questi override:
 - rimuovono l'esposizione pubblica di `mysql`
 - escludono `adminer` dall'uso server normale tramite profilo `local-only`
 - fanno buildare il frontend demo direttamente sul server via Docker
+- usano `!reset` nei compose override per evitare che Docker erediti i mount locali del frontend demo e le porte del file base
 
 In questo assetto, lato pubblico restano esposte solo:
 
