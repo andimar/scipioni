@@ -67,6 +67,8 @@ Oppure, per staging con migrazioni, seed demo e check finale:
 ./ops/staging-demo-setup.sh
 ```
 
+Lo script forza anche la creazione del database applicativo se il volume MySQL e' gia' presente ma il database non esiste ancora.
+
 Produzione:
 
 ```bash

@@ -10,6 +10,10 @@ echo [staging] Avvio stack con rebuild...
 docker compose %COMPOSE_FILES% up -d --build
 if errorlevel 1 goto :error
 
+echo [staging] Verifico database applicativo...
+docker compose %COMPOSE_FILES% exec -T mysql mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS scipioni_club CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+if errorlevel 1 goto :error
+
 echo [staging] Pulizia cache applicativa...
 docker compose %COMPOSE_FILES% exec -T app php artisan optimize:clear
 if errorlevel 1 goto :error

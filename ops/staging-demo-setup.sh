@@ -14,6 +14,14 @@ docker compose \
   -f docker-compose.edge.staging.yml \
   up -d --build
 
+echo "[staging] Verifico database applicativo..."
+docker compose \
+  -f docker-compose.yml \
+  -f docker-compose.staging.yml \
+  -f docker-compose.server.staging.yml \
+  -f docker-compose.edge.staging.yml \
+  exec -T mysql mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS scipioni_club CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+
 echo "[staging] Pulizia cache applicativa..."
 docker compose \
   -f docker-compose.yml \
