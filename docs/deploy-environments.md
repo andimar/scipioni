@@ -83,6 +83,18 @@ Staging:
 docker compose -f docker-compose.yml -f docker-compose.staging.yml up -d
 ```
 
+Per il bootstrap staging completo con rebuild, migrazioni e dati demo:
+
+```bash
+./ops/staging-demo-setup.sh
+```
+
+Da Windows e PowerShell e' disponibile anche:
+
+```powershell
+.\ops\staging-demo-setup.bat
+```
+
 Produzione:
 
 ```bash

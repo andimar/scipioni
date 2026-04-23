@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\AdminUser;
+use App\Models\Booking;
 use App\Models\Event;
 use App\Models\EventAudience;
 use App\Models\EventCategory;
@@ -109,6 +110,20 @@ class DatabaseSeeder extends Seeder
                     'event_preferences' => ['degustazioni guidate'],
                 ],
                 'is_enabled' => true,
+            ]
+        );
+
+        Booking::updateOrCreate(
+            [
+                'user_id' => $user->id,
+                'event_id' => $event->id,
+            ],
+            [
+                'status' => 'confirmed',
+                'seats_reserved' => 2,
+                'customer_notes' => 'Preferenza per tavolo tranquillo e degustazione guidata completa.',
+                'internal_notes' => 'Cliente interessato a future serate bollicine.',
+                'confirmed_at' => now(),
             ]
         );
     }

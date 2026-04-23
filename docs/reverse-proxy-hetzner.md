@@ -61,6 +61,12 @@ docker compose \
   up -d
 ```
 
+Oppure, per staging con migrazioni, seed demo e check finale:
+
+```bash
+./ops/staging-demo-setup.sh
+```
+
 Produzione:
 
 ```bash
