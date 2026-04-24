@@ -34,16 +34,7 @@
         }
 
         .mark {
-            width: 58px;
-            height: 58px;
-            border-radius: 18px;
-            background: linear-gradient(135deg, #7c2432 0%, #b76e4d 100%);
-            color: white;
-            display: grid;
-            place-items: center;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 22px;
-            font-weight: 700;
+            width: 210px;
             margin-bottom: 18px;
         }
 
@@ -118,7 +109,7 @@
 </head>
 <body>
     <div class="card">
-        <div class="mark">MS</div>
+        <img src="{{ asset('brand/logo.svg') }}" alt="Magazzino Scipioni" class="mark">
         <div class="eyebrow">Magazzino Scipioni</div>
         <h1>Scipioni Admin</h1>
         <p>Accesso staff per gestire il club riservato, gli eventi e le prenotazioni.</p>

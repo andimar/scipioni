@@ -47,17 +47,9 @@
         }
 
         .brand-mark {
-            width: 58px;
-            height: 58px;
-            border-radius: 18px;
-            background: linear-gradient(135deg, #7c2432 0%, #b76e4d 100%);
-            display: grid;
-            place-items: center;
-            color: white;
-            font-family: Georgia, "Times New Roman", serif;
-            font-weight: 700;
+            width: 190px;
             margin-bottom: 18px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, .22);
+            filter: invert(1);
         }
 
         .brand {
@@ -410,7 +402,7 @@
 <body>
 <div class="shell">
     <aside class="sidebar">
-        <div class="brand-mark">MS</div>
+        <img src="{{ asset('brand/logo.svg') }}" alt="Magazzino Scipioni" class="brand-mark">
         <div class="brand">Scipioni<br>Admin</div>
         <div class="brand-sub">Pannello staff per eventi, prenotazioni e utenti del club riservato.</div>
         <nav class="nav">
