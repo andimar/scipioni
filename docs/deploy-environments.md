@@ -89,7 +89,7 @@ Per il bootstrap staging completo con rebuild, migrazioni e dati demo:
 ./ops/staging-demo-setup.sh
 ```
 
-Lo script crea anche il database `scipioni_club` se manca, esegue le migrazioni, carica i dati demo e solo dopo pulisce la cache applicativa. Questo evita errori su `cache` quando il database o le tabelle non esistono ancora.
+Lo script crea anche il database `scipioni_club` se manca, riallinea `composer install` e `package:discover`, esegue le migrazioni, carica i dati demo e solo dopo pulisce la cache applicativa. Questo evita errori su `cache` quando il database o le tabelle non esistono ancora e riduce i problemi dovuti a provider/cache non riallineati dopo il deploy.
 
 Da Windows e PowerShell e' disponibile anche:
 

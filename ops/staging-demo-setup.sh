@@ -22,6 +22,21 @@ docker compose \
   -f docker-compose.edge.staging.yml \
   exec -T mysql mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS scipioni_club CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 
+echo "[staging] Riallino dipendenze PHP e package discovery..."
+docker compose \
+  -f docker-compose.yml \
+  -f docker-compose.staging.yml \
+  -f docker-compose.server.staging.yml \
+  -f docker-compose.edge.staging.yml \
+  exec -T app composer install --no-interaction --prefer-dist
+
+docker compose \
+  -f docker-compose.yml \
+  -f docker-compose.staging.yml \
+  -f docker-compose.server.staging.yml \
+  -f docker-compose.edge.staging.yml \
+  exec -T app php artisan package:discover --ansi
+
 echo "[staging] Eseguo migrazioni..."
 docker compose \
   -f docker-compose.yml \

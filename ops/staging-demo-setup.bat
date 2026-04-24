@@ -14,6 +14,13 @@ echo [staging] Verifico database applicativo...
 docker compose %COMPOSE_FILES% exec -T mysql mysql -uroot -proot -e "CREATE DATABASE IF NOT EXISTS scipioni_club CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
 if errorlevel 1 goto :error
 
+echo [staging] Riallino dipendenze PHP e package discovery...
+docker compose %COMPOSE_FILES% exec -T app composer install --no-interaction --prefer-dist
+if errorlevel 1 goto :error
+
+docker compose %COMPOSE_FILES% exec -T app php artisan package:discover --ansi
+if errorlevel 1 goto :error
+
 echo [staging] Eseguo migrazioni...
 docker compose %COMPOSE_FILES% exec -T app php artisan migrate --force
 if errorlevel 1 goto :error
