@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;500;700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#261900",
+                    "surface": "#fbf9f5",
+                    "outline-variant": "#dac1bf",
+                    "tertiary-fixed": "#e9e1dc",
+                    "on-primary-fixed-variant": "#77302d",
+                    "on-tertiary-fixed-variant": "#4b4642",
+                    "on-surface-variant": "#544341",
+                    "surface-container-high": "#eae8e4",
+                    "tertiary-container": "#282421",
+                    "surface-container": "#efeeea",
+                    "inverse-surface": "#30312e",
+                    "primary-container": "#4a0e0e",
+                    "tertiary": "#120f0d",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#ffb3ad",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#775a19",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e4e2de",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#1e1b18",
+                    "on-surface": "#1b1c1a",
+                    "secondary-container": "#fed488",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "on-primary-container": "#cc726d",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fbf9f5",
+                    "secondary-fixed": "#ffdea5",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdad7",
+                    "surface-container-low": "#f5f3ef",
+                    "surface-dim": "#dbdad6",
+                    "secondary-fixed-dim": "#e9c176",
+                    "surface-tint": "#954742",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "tertiary-fixed-dim": "#cdc5c0",
+                    "on-tertiary-container": "#918b86",
+                    "surface-bright": "#fbf9f5",
+                    "surface-container-highest": "#e4e2de",
+                    "on-primary-fixed": "#3d0506",
+                    "primary": "#2a0002",
+                    "outline": "#877270",
+                    "on-secondary-container": "#785a1a",
+                    "inverse-on-surface": "#f2f0ed",
+                    "on-background": "#1b1c1a",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "overlap-offset": "-40px",
+                    "container-max": "1280px",
+                    "margin-edge": "64px",
+                    "gutter": "32px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "label-caps": ["Manrope"],
+                    "display-xl": ["Noto Serif"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg": ["Noto Serif"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .overlap-container {
+            margin-top: -80px;
+        }
+        input:focus {
+            outline: none !important;
+            border-color: #775a19 !important;
+            box-shadow: none !important;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-[#FDFCF0] dark:bg-[#1A1A1A] border-b border-[#4A0E0E]/10 dark:border-[#E5D5C5]/10 shadow-[0_10px_30px_-15px_rgba(74,14,14,0.08)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#4A0E0E] dark:text-[#E5D5C5] cursor-pointer hover:opacity-70 transition-opacity duration-500">menu</span>
+</div>
+<div class="font-noto-serif uppercase tracking-[0.3em] text-xl font-medium text-[#4A0E0E] dark:text-[#E5D5C5]">
+            MAGAZZINO SCIPIONI
+        </div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#4A0E0E] dark:text-[#E5D5C5] cursor-pointer hover:opacity-70 transition-opacity duration-500">account_circle</span>
+</div>
+</header>
+<main class="pt-20 pb-32">
+<section class="relative w-full h-[530px] overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up of a vintage wine cellar with dusty bottles resting on wooden shelves in soft, warm, atmospheric candlelight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADQWlDeYRaSx4B5iJ1TUKFV9qNOl6q__34uLvrfbIKojxRQAbuJ48z4GHm_Hgqtw6X8kz-TRh0UTVDN2VxB_NzGaLmLupZjEMiOG5cM8N_SYjweHZHNGqm-_d3w3NdWjR1_-ciBAbX8S86q-txCvSPhfg6XdExLJUtZcdAO4s20kXrKEyL4SL3R8bg3XQKMhI4n6LhRNtJG2nBmdOSaaH-rLV9acYG469B_k9yMwELfxPqxW8ajMO-uTRgjEdYPbgjE09k3Sl0pxER"/>
+<div class="absolute inset-0 bg-primary/40 flex items-center justify-center p-margin-edge">
+<div class="text-center max-w-3xl">
+<span class="font-label-caps text-label-caps text-surface-container-lowest mb-4 block">BENVENUTO NEL CLUB</span>
+<h1 class="font-display-xl text-display-xl text-surface-container-lowest">Inizia il tuo viaggio tra i sensi.</h1>
+</div>
+</div>
+</section>
+<section class="max-w-[1000px] mx-auto px-6 overlap-container relative z-10">
+<div class="bg-surface shadow-[0_20px_60px_rgba(74,14,14,0.12)] p-12 md:p-20">
+<div class="flex justify-between items-center mb-16">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-secondary uppercase">Step 1 di 3</span>
+<h2 class="font-headline-md text-headline-md text-primary">Dati Personali</h2>
+</div>
+<div class="flex gap-2">
+<div class="w-8 h-1 bg-primary"></div>
+<div class="w-8 h-1 bg-surface-variant"></div>
+<div class="w-8 h-1 bg-surface-variant"></div>
+</div>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-outline mb-2 uppercase">Nome</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant font-body-lg text-body-lg py-2 transition-colors focus:border-secondary" placeholder="Giacomo" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-outline mb-2 uppercase">Cognome</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant font-body-lg text-body-lg py-2 transition-colors focus:border-secondary" placeholder="Scipioni" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-outline mb-2 uppercase">Email</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant font-body-lg text-body-lg py-2 transition-colors focus:border-secondary" placeholder="giacomo@esempio.it" type="email"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-outline mb-2 uppercase">Telefono</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant font-body-lg text-body-lg py-2 transition-colors focus:border-secondary" placeholder="+39 340 000 0000" type="tel"/>
+</div>
+<div class="flex flex-col md:col-span-2">
+<label class="font-label-caps text-label-caps text-outline mb-2 uppercase">Password</label>
+<input class="bg-transparent border-t-0 border-x-0 border-b border-outline-variant font-body-lg text-body-lg py-2 transition-colors focus:border-secondary" placeholder="••••••••" type="password"/>
+</div>
+<div class="md:col-span-2 mt-12">
+<div class="flex items-center gap-4 mb-8">
+<h3 class="font-headline-md text-[24px] text-primary">Le Tue Passioni</h3>
+<div class="flex-grow h-[1px] bg-outline-variant/30"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Seleziona ciò che più solletica il tuo palato per ricevere suggerimenti su misura.</p>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2 border border-primary bg-primary text-surface-container-lowest font-label-caps text-[11px] transition-all" type="button">ROSSI STRUTTURATI</button>
+<button class="px-5 py-2 border border-outline-variant hover:border-secondary text-primary font-label-caps text-[11px] transition-all" type="button">BOLLICINE FRANCESI</button>
+<button class="px-5 py-2 border border-outline-variant hover:border-secondary text-primary font-label-caps text-[11px] transition-all" type="button">DEGUSTAZIONE CRUDI</button>
+<button class="px-5 py-2 border border-outline-variant hover:border-secondary text-primary font-label-caps text-[11px] transition-all" type="button">BIANCHI MINERALI</button>
+<button class="px-5 py-2 border border-primary bg-primary text-surface-container-lowest font-label-caps text-[11px] transition-all" type="button">VINI NATURALI</button>
+<button class="px-5 py-2 border border-outline-variant hover:border-secondary text-primary font-label-caps text-[11px] transition-all" type="button">TARTUFO &amp; SELVAGGINA</button>
+<button class="px-5 py-2 border border-outline-variant hover:border-secondary text-primary font-label-caps text-[11px] transition-all" type="button">ECCELLENZE LAZIALI</button>
+</div>
+</div>
+<div class="md:col-span-2 mt-10 space-y-4">
+<label class="flex items-start gap-4 cursor-pointer group">
+<div class="relative flex items-center pt-1">
+<input class="peer appearance-none w-5 h-5 border border-outline-variant rounded-none checked:bg-secondary checked:border-secondary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-surface text-[14px] left-1 opacity-0 peer-checked:opacity-100 transition-opacity">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Accetto i <a class="underline underline-offset-4 decoration-secondary/30" href="#">Termini di Servizio</a> e confermo di avere più di 18 anni.</span>
+</label>
+<label class="flex items-start gap-4 cursor-pointer group">
+<div class="relative flex items-center pt-1">
+<input class="peer appearance-none w-5 h-5 border border-outline-variant rounded-none checked:bg-secondary checked:border-secondary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-surface text-[14px] left-1 opacity-0 peer-checked:opacity-100 transition-opacity">check</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors">Desidero ricevere inviti esclusivi a degustazioni private e novità della cantina.</span>
+</label>
+</div>
+<div class="md:col-span-2 mt-12 flex flex-col md:flex-row items-center justify-between gap-8">
+<a class="font-label-caps text-label-caps text-outline hover:text-primary underline underline-offset-8 transition-colors" href="#">HAI GIÀ UN ACCOUNT? ACCEDI</a>
+<button class="w-full md:w-auto bg-primary text-surface-container-lowest px-16 py-5 font-label-caps text-[14px] tracking-[0.2em] hover:bg-secondary transition-colors duration-500 shadow-xl" type="submit">
+                            PROSEGUI AL PASSO 2
+                        </button>
+</div>
+</form>
+</div>
+</section>
+<section class="max-w-container-max mx-auto px-margin-edge mt-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 relative">
+<img class="w-full h-auto shadow-2xl relative z-10" data-alt="A focused sommelier pouring a deep red wine into a crystal glass in a dim-lit, sophisticated wine cellar setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRGsALi0DXJFCnWuqMyOOIAjzNFhaehlCptix8t8Yyt8YvycbPGd5_MBAVupq_7FrQuajeZy9GZtt3Sem27bHL0O0o2dNITO2crnKPc_NUW0Y0NELzy5AGTpH0TdwPprVVD3UR97H9RTFpDxa0mK82hBMrM3FP5svslPx0fJSkiLowkI13Q7Udc95yMk0U48jFjMNXRr-WOHjb5cd5YSqwGKvu8F0hKL9PrbhiLORW3kJmE7HE0sRshMHogViftxOh8MIAmG5tlP3E"/>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 border-[1px] border-secondary/30 -z-0"></div>
+</div>
+<div class="md:col-span-6 md:col-start-7 py-12">
+<span class="font-label-caps text-label-caps text-secondary mb-6 block">L'ESPERIENZA SCIPIONI</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-8 leading-tight">Più che un magazzino, una destinazione per l'anima.</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                    Essere parte del nostro club significa accedere a lotti limitati, partecipare a verticali storiche condotte dai migliori sommelier e godere di un servizio di conciergerie dedicato alla tua collezione privata.
+                </p>
+<div class="flex items-center gap-4 group cursor-pointer">
+<span class="font-label-caps text-label-caps text-primary border-b-2 border-secondary pb-1 group-hover:pr-4 transition-all duration-300">SCOPRI I VANTAGGI MEMBRI</span>
+<span class="material-symbols-outlined text-secondary">arrow_right_alt</span>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-tertiary-container text-on-tertiary-container py-20 px-margin-edge">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-sm">
+<div class="font-noto-serif uppercase tracking-[0.3em] text-lg font-medium text-surface mb-8">MAGAZZINO SCIPIONI</div>
+<p class="font-body-md text-on-tertiary-container/70 mb-8">Via degli Scipioni, Roma. Un luogo dove il tempo rallenta per lasciare spazio al piacere autentico del vino.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">language</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">wine_bar</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-secondary-fixed transition-colors">location_on</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-20">
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-surface-container-lowest">NAVIGA</h4>
+<a class="font-body-md text-on-tertiary-container/60 hover:text-surface transition-colors" href="#">La Cantina</a>
+<a class="font-body-md text-on-tertiary-container/60 hover:text-surface transition-colors" href="#">Eventi</a>
+<a class="font-body-md text-on-tertiary-container/60 hover:text-surface transition-colors" href="#">Prenotazioni</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-surface-container-lowest">LEGAL</h4>
+<a class="font-body-md text-on-tertiary-container/60 hover:text-surface transition-colors" href="#">Privacy</a>
+<a class="font-body-md text-on-tertiary-container/60 hover:text-surface transition-colors" href="#">Cookie</a>
+<a class="font-body-md text-on-tertiary-container/60 hover:text-surface transition-colors" href="#">Termini</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-20 pt-8 border-t border-surface/10 flex justify-between items-center">
+<span class="font-label-caps text-[10px] tracking-widest text-on-tertiary-container/40">© 2024 MAGAZZINO SCIPIONI. ALL RIGHTS RESERVED.</span>
+<span class="font-label-caps text-[10px] tracking-widest text-on-tertiary-container/40">DRINK RESPONSIBLY</span>
+</div>
+</footer>
+</body></html>

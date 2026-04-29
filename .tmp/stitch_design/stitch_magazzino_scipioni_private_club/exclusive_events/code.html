@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;500&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#261900",
+                        "surface": "#fbf9f5",
+                        "outline-variant": "#dac1bf",
+                        "tertiary-fixed": "#e9e1dc",
+                        "on-primary-fixed-variant": "#77302d",
+                        "on-tertiary-fixed-variant": "#4b4642",
+                        "on-surface-variant": "#544341",
+                        "surface-container-high": "#eae8e4",
+                        "tertiary-container": "#282421",
+                        "surface-container": "#efeeea",
+                        "inverse-surface": "#30312e",
+                        "primary-container": "#4a0e0e",
+                        "tertiary": "#120f0d",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#ffb3ad",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#775a19",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e4e2de",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1e1b18",
+                        "on-surface": "#1b1c1a",
+                        "secondary-container": "#fed488",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "on-primary-container": "#cc726d",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fbf9f5",
+                        "secondary-fixed": "#ffdea5",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#ffdad7",
+                        "surface-container-low": "#f5f3ef",
+                        "surface-dim": "#dbdad6",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface-tint": "#954742",
+                        "primary-fixed-dim": "#ffb3ad",
+                        "tertiary-fixed-dim": "#cdc5c0",
+                        "on-tertiary-container": "#918b86",
+                        "surface-bright": "#fbf9f5",
+                        "surface-container-highest": "#e4e2de",
+                        "on-primary-fixed": "#3d0506",
+                        "primary": "#2a0002",
+                        "outline": "#877270",
+                        "on-secondary-container": "#785a1a",
+                        "inverse-on-surface": "#f2f0ed",
+                        "on-background": "#1b1c1a",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "overlap-offset": "-40px",
+                        "container-max": "1280px",
+                        "margin-edge": "64px",
+                        "gutter": "32px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Noto Serif"],
+                        "label-caps": ["Manrope"],
+                        "display-xl": ["Noto Serif"],
+                        "body-lg": ["Manrope"],
+                        "headline-lg": ["Noto Serif"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                        "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .asymmetric-overlap {
+            margin-top: -40px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-[#FDFCF0] border-b border-[#4A0E0E]/10 shadow-[0_10px_30px_-15px_rgba(74,14,14,0.08)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#4A0E0E] cursor-pointer hover:opacity-70 transition-opacity duration-500" data-icon="menu">menu</span>
+</div>
+<h1 class="font-noto-serif uppercase tracking-[0.3em] text-xl font-medium text-[#4A0E0E]">MAGAZZINO SCIPIONI</h1>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#4A0E0E] cursor-pointer hover:opacity-70 transition-opacity duration-500" data-icon="account_circle">account_circle</span>
+</div>
+</header>
+<main class="pt-32 pb-32 px-margin-edge max-w-container-max mx-auto">
+<!-- Hero Section / Title -->
+<section class="mb-section-gap">
+<div class="flex flex-col md:flex-row justify-between items-baseline border-b border-outline/20 pb-unit gap-6">
+<div>
+<span class="font-label-caps text-label-caps text-secondary block mb-2">CALENDARIO ESCLUSIVO</span>
+<h2 class="font-display-xl text-headline-lg md:text-display-xl text-primary leading-tight">I Nostri Eventi</h2>
+</div>
+<div class="md:text-right max-w-sm">
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">
+                        Esperienze sensoriali curate dai nostri sommelier per i palati più esigenti della capitale.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Search and Filter Bar -->
+<section class="mb-16">
+<div class="flex flex-wrap gap-gutter items-center border-b border-outline/10 pb-8">
+<div class="flex-grow min-w-[300px] relative">
+<span class="material-symbols-outlined absolute left-0 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full bg-transparent border-0 border-b border-charcoal-brown focus:ring-0 focus:border-secondary pl-8 py-3 font-body-md text-on-surface" placeholder="Cerca un evento..." type="text"/>
+</div>
+<div class="flex gap-8 items-center">
+<div class="group cursor-pointer">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-secondary transition-colors uppercase">Data</span>
+<span class="material-symbols-outlined align-middle ml-1 text-xs" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+<div class="group cursor-pointer">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-secondary transition-colors uppercase">Categoria</span>
+<span class="material-symbols-outlined align-middle ml-1 text-xs" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+<div class="group cursor-pointer">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-secondary transition-colors uppercase">Prezzo</span>
+<span class="material-symbols-outlined align-middle ml-1 text-xs" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Magazine Grid -->
+<div class="grid grid-cols-12 gap-y-24 gap-x-gutter">
+<!-- Featured Event Card -->
+<article class="col-span-12 lg:col-span-8 group relative mb-8">
+<div class="aspect-[16/9] overflow-hidden bg-surface-container shadow-xl">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Dramatically lit close-up of a deep red wine being poured into a crystal glass in a dark, atmospheric Roman cellar with candlelight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtt7wSioyw1J_sAs8ov2BWGVzexAtijaTYEJbdpkjuzhN0rcf6MKKrSKGWyFuhGFa5xVOO20r6ynw76AADNikkmUK9I4yaAwdjymbgDDIeKacP8vTTxXAmlEGMYTIosPPrcZtAWZpMpLuPdudNyVcflX-P-wmgWTVDd7LRjY4DRk0PwOg-ep9yK_nx7-sZe_qJYCtXA6FTyQ94ILXHiQoaK_Ds6esZ8eo_zU6S0BOETXXXYYeI3mVgRnRkb3UfMMn1DcOuVoz-dZKD"/>
+</div>
+<div class="lg:absolute lg:right-overlap-offset lg:bottom-overlap-offset bg-surface p-10 lg:max-w-md shadow-[0_20px_50px_rgba(74,14,14,0.08)] z-10">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-primary-container text-surface px-4 py-1 text-[10px] font-label-caps uppercase tracking-widest">Consigliato per te</span>
+<span class="font-headline-md text-secondary">€120</span>
+</div>
+<h3 class="font-headline-lg text-headline-md text-primary mb-2">Verticale di Brunello di Montalcino</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Un viaggio attraverso le annate storiche di una delle etichette più prestigiose della Toscana.</p>
+<div class="flex justify-between items-center border-t border-outline/10 pt-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-caps text-[10px]">15 NOVEMBRE, 20:30</span>
+</div>
+<button class="bg-primary-container text-surface px-8 py-3 font-label-caps text-[11px] hover:bg-secondary transition-colors">PRENOTA ORA</button>
+</div>
+</div>
+</article>
+<!-- Secondary Event Card (Right) -->
+<article class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col pt-12">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container-high mb-8 relative">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Artistic composition of fresh black truffles and a knife on a rustic dark wood surface with soft moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADOZPy2rZUVe7MTbOO31lHnZTcRvPwjWw7wI87l-8Jy-aRkoxi3MW3d0KZ81ZW6GIRfknLhp6BxpqQMQVdtHI7Ke2RyT0GEKKsQKyDGB2BoO6OhteRUacQiBb6FkhyOOY1v2JX_LBuoaJb0DR5-AADembsBoHxzQRgSQqnj5-iHzNbXyI_SgxRaNG3vlD_nxYivlBvoOox9se-AgA-_PD_ofWQ_wgjgUTKKiP8QGTmhz8ni829KjlEmUJdZfliFi8-xEnCpRGjEr4q"/>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-sm p-4 rounded-full w-16 h-16 flex items-center justify-center border border-secondary/20">
+<span class="text-secondary font-headline-md text-lg">€95</span>
+</div>
+</div>
+<span class="font-label-caps text-[10px] text-secondary mb-2">DEGUSTAZIONE GASTRONOMICA</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Cena al Tartufo Bianco</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Quattro portate dedicate al diamante della terra, abbinate a vini d'eccezione del Piemonte.</p>
+<div class="mt-auto flex items-center gap-4 text-outline border-b border-outline/10 pb-4">
+<span class="material-symbols-outlined" data-icon="event">event</span>
+<span class="font-label-caps text-[11px]">22 NOVEMBRE</span>
+</div>
+</article>
+<!-- Spacing Offset for Grid Visual Rhythm -->
+<div class="hidden lg:block col-span-1"></div>
+<!-- Third Event Card (Left) -->
+<article class="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col">
+<div class="aspect-[4/5] overflow-hidden bg-surface-container mb-8">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="Sparkling wine bubbles rising in a tall flute glass with golden reflections and a luxury celebratory atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYhMkmWTlny8oCFeFLxhyqTKppNnucZvH-AXjiSHXe0-phuh4j3oGiY7od3j8CIHlPLcgw_K6SJ124w9HHR1c6dzqwih-ACcdmFTlyr0SiZNArHM-KslIkKHqKEzTVWip1_E4QQHkAo-bXA7PxoTGUCh6MGNphX7jLMpnqpX_Xtlz_QPkLKtwk8lipGEWvTp3QKNYjWN0Wz9L7rkyPuNACJfw35vz4vdqH6BV3FFE3osFHLbBQWs-OnWrQgrg9vVv-I7lxJZGHC1Gs"/>
+</div>
+<div class="pr-8">
+<span class="font-label-caps text-[10px] text-secondary mb-2">BOLLICINE</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Bollicine d'Autunno: Franciacorta &amp; Champagne</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Un confronto tra le due grandi eccellenze dei metodi classici in una serata frizzante.</p>
+<div class="flex items-center justify-between">
+<div class="flex gap-4">
+<span class="text-primary font-headline-md text-xl">€75</span>
+<div class="w-px h-8 bg-outline/20"></div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] text-outline">DATA</span>
+<span class="font-label-caps text-[11px]">02 DICEMBRE</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-secondary transition-colors" data-icon="arrow_forward_ios">arrow_forward_ios</span>
+</div>
+</div>
+</article>
+<!-- Editorial Quote/Interruption -->
+<aside class="col-span-12 lg:col-span-6 flex items-center justify-center p-12 bg-tertiary-fixed text-center">
+<div class="max-w-md">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="format_quote" data-weight="fill">format_quote</span>
+<p class="font-headline-md text-headline-md text-primary italic mb-6">"Il vino è la poesia della terra messa in bottiglia."</p>
+<span class="font-label-caps text-[10px] tracking-[0.3em] text-outline">MEMBRI DEL CLUB - SCONTO 15%</span>
+</div>
+</aside>
+<!-- Bottom Cards -->
+<article class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col">
+<div class="aspect-square overflow-hidden bg-surface-container relative mb-8">
+<img class="w-full h-full object-cover" data-alt="Underground ancient wine cellar with rows of wooden barrels and soft warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo9nYw130J52iGHm9OOZI17WaOo1BW6mewbuDkuwUy20lIiyUyBi7o1eWPnQYBtZLu8_ce9Cs1Ep5laI4CBPvxnXTHp0mdDF9sS1VORPLsP9Pgbru5JNTp02_NeOnFOq5Fx-9Mm7FTOqKwcx9D3l2FK4v5nGq_aa0q1XmAhUIfm-YI8-Po7JP6Q2sFngLHZIIkoBd1-akM0Upud1gsitLgVxZkiERJ-vyGm5i0DAwdAdT7YTPdOcGQVXq8RC_VmbhPEhV6eqLU3v77"/>
+<div class="absolute inset-0 bg-primary/20 hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<span class="font-label-caps text-[10px] text-secondary mb-2">TOUR ESCLUSIVO</span>
+<h3 class="font-headline-md text-2xl text-primary mb-4">I Segreti della Cantina</h3>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="font-label-caps text-[11px]">TUTTI I GIOVEDÌ</span>
+</div>
+</article>
+<article class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col md:mt-24">
+<div class="aspect-square overflow-hidden bg-surface-container relative mb-8">
+<img class="w-full h-full object-cover" data-alt="A professional sommelier explaining wine notes to a small group of elegant guests in a modern minimal tasting room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY6LMa71lNpimrcig6czajFCHxMQriwQWvGoYcjpCpoePlY9oviU1JsIPTHLAoOR8kBFrHjaESc7BgP_mgK6TDi-QWA4Dq5BWQkYxHr4zOCtxlzq6bLi8nzxiaZDm1z3Lf176uEyB03rxS2BadOAoT_hcsAumwvbV2v1e-cVqhvUAI2e1KNPr8avGU91FLLceKqDViTxvJHJZpSPNiQvGodsvGSGqsmcLDgK5VCxWXIPFSDF7SjtILSNWFSxWx1_8iaoybn_oqtttx"/>
+</div>
+<span class="font-label-caps text-[10px] text-secondary mb-2">EDUCATION</span>
+<h3 class="font-headline-md text-2xl text-primary mb-4">Masterclass: L'Arte del Decanting</h3>
+<div class="flex items-center gap-4 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="font-label-caps text-[11px]">10 DICEMBRE</span>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-6 pt-2 bg-[#FDFCF0]/90 backdrop-blur-md shadow-[0_-5px_25px_rgba(74,14,14,0.05)] border-t border-[#4A0E0E]/5">
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 pt-2 hover:text-[#4A0E0E] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E] border-t-2 border-[#4A0E0E] pt-2 scale-100" href="#">
+<span class="material-symbols-outlined" data-icon="wine_bar">wine_bar</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif mt-1">Eventi</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 pt-2 hover:text-[#4A0E0E] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif mt-1">Prenotazioni</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 pt-2 hover:text-[#4A0E0E] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif mt-1">Profilo</span>
+</a>
+</nav>
+</body></html>

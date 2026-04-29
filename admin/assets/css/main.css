@@ -1,0 +1,132 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-sans: 'Public Sans', system-ui, sans-serif;
+
+  --color-ops-50: #f6faf9;
+  --color-ops-100: #dfeeea;
+  --color-ops-500: #227568;
+  --color-ops-600: #195f55;
+  --color-ops-700: #124a43;
+  --color-ops-900: #092522;
+}
+
+:root {
+  --ui-primary: var(--color-ops-600);
+  --ui-bg: #f4f6f7;
+  --ui-text: #17202a;
+  --ui-radius: 0.5rem;
+  --ui-container: var(--container-7xl);
+  color-scheme: light;
+}
+
+.dark {
+  --ui-primary: #4fb7a8;
+  --ui-bg: #111417;
+  --ui-text: #eef2f4;
+  color-scheme: dark;
+}
+
+html,
+body,
+#__nuxt {
+  min-height: 100%;
+}
+
+body {
+  color: var(--ui-text);
+  background: #f4f6f7;
+}
+
+.dark body {
+  background: #111417;
+}
+
+.admin-shell {
+  min-height: 100vh;
+  background: #f4f6f7;
+}
+
+.dark .admin-shell {
+  background: #111417;
+}
+
+.admin-sidebar {
+  background: #ffffff;
+  color: #17202a;
+}
+
+.dark .admin-sidebar {
+  background: #171b1f;
+  color: #eef2f4;
+}
+
+.admin-header {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: #d7dee2;
+}
+
+.dark .admin-header {
+  background: rgba(23, 27, 31, 0.94);
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+.surface {
+  border: 1px solid #d7dee2;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.dark .surface {
+  border-color: rgba(255, 255, 255, 0.09);
+  background: #171b1f;
+  box-shadow: none;
+}
+
+.field-panel {
+  border: 1px solid #d7dee2;
+  background: #ffffff;
+}
+
+.dark .field-panel {
+  border-color: rgba(255, 255, 255, 0.09);
+  background: #171b1f;
+}
+
+.login-card [data-slot="label"] {
+  color: #17202a;
+  font-weight: 600;
+}
+
+.login-card .login-input input {
+  background: #ffffff;
+  border: 1px solid #cbd5dc;
+  color: #111827;
+  caret-color: #111827;
+}
+
+.login-card .login-input input::placeholder {
+  color: #6b7280;
+}
+
+.login-card .login-input input:-webkit-autofill,
+.login-card .login-input input:-webkit-autofill:hover,
+.login-card .login-input input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #111827;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.login-card .login-submit {
+  background: #124a43;
+  border-color: #124a43;
+  color: #ffffff;
+}
+
+.login-card .login-submit:hover,
+.login-card .login-submit:focus-visible {
+  background: #092522;
+  border-color: #092522;
+  color: #ffffff;
+}

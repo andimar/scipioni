@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#261900",
+                    "surface": "#fbf9f5",
+                    "outline-variant": "#dac1bf",
+                    "tertiary-fixed": "#e9e1dc",
+                    "on-primary-fixed-variant": "#77302d",
+                    "on-tertiary-fixed-variant": "#4b4642",
+                    "on-surface-variant": "#544341",
+                    "surface-container-high": "#eae8e4",
+                    "tertiary-container": "#282421",
+                    "surface-container": "#efeeea",
+                    "inverse-surface": "#30312e",
+                    "primary-container": "#4a0e0e",
+                    "tertiary": "#120f0d",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#ffb3ad",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#775a19",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e4e2de",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#1e1b18",
+                    "on-surface": "#1b1c1a",
+                    "secondary-container": "#fed488",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "on-primary-container": "#cc726d",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fbf9f5",
+                    "secondary-fixed": "#ffdea5",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdad7",
+                    "surface-container-low": "#f5f3ef",
+                    "surface-dim": "#dbdad6",
+                    "secondary-fixed-dim": "#e9c176",
+                    "surface-tint": "#954742",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "tertiary-fixed-dim": "#cdc5c0",
+                    "on-tertiary-container": "#918b86",
+                    "surface-bright": "#fbf9f5",
+                    "surface-container-highest": "#e4e2de",
+                    "on-primary-fixed": "#3d0506",
+                    "primary": "#2a0002",
+                    "outline": "#877270",
+                    "on-secondary-container": "#785a1a",
+                    "inverse-on-surface": "#f2f0ed",
+                    "on-background": "#1b1c1a",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "overlap-offset": "-40px",
+                    "container-max": "1280px",
+                    "margin-edge": "64px",
+                    "gutter": "32px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "label-caps": ["Manrope"],
+                    "display-xl": ["Noto Serif"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg": ["Noto Serif"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 50px -15px rgba(74, 14, 14, 0.08);
+        }
+        .text-vertical {
+            writing-mode: vertical-rl;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-[#FDFCF0] dark:bg-[#1A1A1A] border-b border-[#4A0E0E]/10 dark:border-[#E5D5C5]/10 shadow-[0_10px_30px_-15px_rgba(74,14,14,0.08)]">
+<button class="text-[#4A0E0E] dark:text-[#E5D5C5] hover:opacity-70 transition-opacity duration-500">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="flex items-center gap-3">
+<img alt="Magazzino Scipioni Logo" class="h-8 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfhf1mObeqKdrqmgcbwxxZqxFJHMBFVMk0ZzRFm4U1nLAaBzHrYq_zhN2KBYGLfyifpjxH8-R7_LFgiTjdHgSY6akwDsye_wCu_PeXyzCJ3i83v1AcsDxceikwalYlJMdtaAkj1wITbvW7Qo9RXm2boAZL27S0izmQxMcb3IBXEViO0nkKfM7PnJGvsEpOSc5fekWo_wb70hJqweUvE6FUXQJy3DSnm-a8DJ8Gzs2ld2c4fYpbn_iSzPE1utKImZwHb5VLI2NYd9FF"/>
+<h1 class="text-xl font-medium tracking-[0.3em] text-[#4A0E0E] dark:text-[#E5D5C5] font-noto-serif uppercase">MAGAZZINO SCIPIONI</h1>
+</div>
+<button class="text-[#4A0E0E] dark:text-[#E5D5C5] hover:opacity-70 transition-opacity duration-500">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</header>
+<main class="pt-20 pb-32">
+<!-- Hero Section: La Notte dei Cru -->
+<section class="relative min-h-[751px] flex items-center overflow-hidden mb-section-gap px-margin-edge">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Close-up of a premium wine bottle and a half-filled crystal glass on a dark rustic wooden table in a dimly lit, atmospheric cellar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgN2Y2pOi2lES-iohkrMbQNj8tE9XqoW3rZOqKtWp-6Cx_W3PffbyP3LKzZJVHZ9poofEtnuNEe0fFhFm2hj8CLr2VDNTJaEp0cnpfe0gj32E_Di3paFOFSHKIj0dyqncCbmn1HLScWo9VPMokdyIJ-xKAE5mIWBrKx2p9I04DfAG2iwGF5U4PqsSWZY5gHiQJbr0DSIFO8HlcXJ3TIjh4eRVvICT7eIZwpk1NRb81iJ__aRcc8mpWATYLqmf0aCtO1wPDhbhMMQTu"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-8 text-surface">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block uppercase">Esperienza Esclusiva</span>
+<h2 class="font-display-xl text-display-xl mb-6 leading-none">La Notte dei Cru</h2>
+<p class="font-body-lg text-body-lg text-surface-variant max-w-xl mb-10">
+                        Un'escursione sensoriale tra i vigneti più prestigiosi d'Italia. Una serata dedicata ai soci Platinum per scoprire l'anima autentica del territorio attraverso sei etichette leggendarie.
+                    </p>
+<div class="flex items-center gap-8">
+<button class="bg-primary-container text-surface px-10 py-5 font-label-caps text-label-caps hover:bg-secondary transition-colors duration-500 shadow-xl">
+                            PRENOTA ORA
+                        </button>
+<div class="flex items-center gap-2 font-label-caps text-label-caps border-b border-surface/30 pb-1">
+<span class="material-symbols-outlined text-sm" data-icon="calendar_today">calendar_today</span>
+                            14 OTTOBRE 2023
+                        </div>
+</div>
+</div>
+</div>
+<div class="absolute right-margin-edge top-1/2 -translate-y-1/2 hidden xl:block">
+<p class="text-vertical font-label-caps text-label-caps text-surface/40 uppercase tracking-[0.5em]">Heritage &amp; Excellence</p>
+</div>
+</section>
+<!-- Prossime Prenotazioni -->
+<section class="px-margin-edge mb-section-gap">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-2">Prossime Prenotazioni</h3>
+<div class="h-1 w-20 bg-secondary"></div>
+</div>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#">VEDI TUTTE</a>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-8 lg:col-span-6 bg-surface-container editorial-shadow p-10 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-secondary opacity-20 text-6xl" data-icon="restaurant">restaurant</span>
+</div>
+<div class="relative z-10">
+<span class="font-label-caps text-label-caps text-secondary mb-6 block">CONFERMATA</span>
+<h4 class="font-headline-md text-headline-md text-primary mb-4">Degustazione Orizzontale Barolo</h4>
+<div class="space-y-4 mb-8">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+<span class="font-body-md text-body-md">Giovedì 28 Settembre, 19:30</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-body-md text-body-md">Tavolo per 2 Persone</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+<span class="font-body-md text-body-md">Sala della Volta Antica</span>
+</div>
+</div>
+<button class="border border-outline text-primary px-8 py-4 font-label-caps text-label-caps hover:bg-primary hover:text-surface transition-all duration-300">
+                            GESTISCI PRENOTAZIONE
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership Banner -->
+<section class="px-margin-edge mb-section-gap">
+<div class="bg-primary p-12 lg:p-20 relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px]" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<div class="relative z-10 flex flex-col lg:flex-row justify-between items-center gap-10">
+<div class="max-w-xl text-center lg:text-left">
+<h3 class="font-headline-lg text-headline-lg text-secondary-fixed mb-4 italic">Membership Platinum</h3>
+<p class="font-body-lg text-body-lg text-surface/80">
+                            Hai accesso prioritario alle nuove release e sconti esclusivi del 20% su tutta la selezione della nostra cantina privata. Il tuo status scade tra 142 giorni.
+                        </p>
+</div>
+<button class="bg-secondary text-primary px-12 py-5 font-label-caps text-label-caps hover:bg-surface transition-colors duration-500 whitespace-nowrap">
+                        SCOPRI I TUOI VANTAGGI
+                    </button>
+</div>
+</div>
+</section>
+<!-- Consigliati per te -->
+<section class="px-margin-edge">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-16 gap-4">
+<h3 class="font-headline-lg text-headline-lg text-primary">Consigliati per te</h3>
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant">FILTRA PER:</span>
+<div class="flex gap-2">
+<span class="px-4 py-1 bg-surface-container-high rounded-full font-label-caps text-[10px] text-primary">ROSSI</span>
+<span class="px-4 py-1 bg-surface-container rounded-full font-label-caps text-[10px] text-on-surface-variant">RISERVE</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Product Card 1 -->
+<div class="col-span-12 sm:col-span-6 lg:col-span-4 group cursor-pointer">
+<div class="relative aspect-[3/4] overflow-hidden mb-6 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Professional studio shot of a dark glass wine bottle with an elegant white label, dramatic lighting against a neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD8T-gX3RNtrJ4LHUF7xJpIyEHhhc-5ZhOIvCWOSSF0_DO7swjl0AAGACsyic15hmvDXhYOJwSiL6LvHyOo2C_LmecxQM347XkhvqCxpY6-SzSS4auK8Bpb6zSvBTKWrk5PUhwgc1Vv9XOPI-VAEFy5IG5XTP0Ws7eP4Us2pKjFuCYCmPwZRMfklOqWlqgGOkewLCV5633wv6tJwlarDYpuABEeR72FDGGlK5QFKLYoZ0B0s2hmJ06h-i-ehrWmH88AU-yt-nbTMcT"/>
+<div class="absolute top-6 left-6">
+<div class="w-12 h-12 rounded-full border border-secondary flex items-center justify-center bg-background/80 backdrop-blur-sm">
+<span class="material-symbols-outlined text-secondary" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<div class="space-y-2">
+<p class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Toscana, Italia</p>
+<h4 class="font-headline-md text-headline-md text-primary leading-tight">Brunello di Montalcino 2017</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Note intense di frutti di bosco, tabacco e spezie dolci. Un classico senza tempo.</p>
+<div class="flex items-center justify-between pt-4">
+<span class="font-label-caps text-body-lg text-primary">€ 85,00</span>
+<button class="flex items-center gap-2 font-label-caps text-label-caps text-secondary group-hover:underline">
+                                AGGIUNGI AL CARRELLO
+                                <span class="material-symbols-outlined text-sm" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="col-span-12 sm:col-span-6 lg:col-span-4 group cursor-pointer mt-12 md:mt-0">
+<div class="relative aspect-[3/4] overflow-hidden mb-6 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An open bottle of red wine next to a glass filled with deep ruby liquid, placed on a dark surface with soft bokeh background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIAxvPib-bmCwnB8LJrWsmwYo1KopacdNZN68gFRmbBj9wsk5sIihJuNAjBMq5ff7v8cJqls9DAmCZSjEuZZcXbuqUNt8FqwZLdSs16WXqrI7at8ne9ySq9nJadBvarfZUSXPRQQhAKqToKmRTzxk37Sa7QBFNoOFSryMkygYB3deGoHHkfmyohAxgYJdWb21srBkzvWQlVKSHqTD0U-2N99zk6lkTb4tJyIsPMWlLi0BYHeNHbkok8itS2wqOqHKmYXAmDVAYJg6F"/>
+</div>
+<div class="space-y-2">
+<p class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Piemonte, Italia</p>
+<h4 class="font-headline-md text-headline-md text-primary leading-tight">Barolo Riserva "Le Rocche"</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Eleganza e struttura ineguagliabile con tannini vellutati e persistenti.</p>
+<div class="flex items-center justify-between pt-4">
+<span class="font-label-caps text-body-lg text-primary">€ 140,00</span>
+<button class="flex items-center gap-2 font-label-caps text-label-caps text-secondary group-hover:underline">
+                                AGGIUNGI AL CARRELLO
+                                <span class="material-symbols-outlined text-sm" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="col-span-12 sm:col-span-6 lg:col-span-4 group cursor-pointer mt-12 lg:mt-0">
+<div class="relative aspect-[3/4] overflow-hidden mb-6 bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close up of a wine cellar with rows of wine bottles resting on wooden racks in soft warm light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgvAixM2TMKJs0R0tFeRR6w-sothC8p-dMagv6XFN_ALxp0-4FxvSKA5RJ4BiOQkUB_TuSIcj6kpHsf1Fh-QCdmLekycBXaIy9UV8xKsbzDxP2G5XzMmQ6kB9_lEXlG1QzRvIuzVpGVb6KQjXdnAL9KIRM3zQf_nVN0rci7sR1-91X7GGEd-1ZMnJG6IGt8jeXFTbYCIJ-G0pGhw-RRZ00mISFueAd50jWP8MsYkOs-ot3T-pkDjIMFZ2DQqAlM7D8WsSgLKTX_S0c"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="bg-surface text-primary px-6 py-3 font-label-caps text-label-caps">SCOPRI DI PIÙ</span>
+</div>
+</div>
+<div class="space-y-2">
+<p class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Veneto, Italia</p>
+<h4 class="font-headline-md text-headline-md text-primary leading-tight">Amarone della Valpolicella</h4>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Potenza e calore, con note di ciliegia sotto spirito e cioccolato fondente.</p>
+<div class="flex items-center justify-between pt-4">
+<span class="font-label-caps text-body-lg text-primary">€ 110,00</span>
+<button class="flex items-center gap-2 font-label-caps text-label-caps text-secondary group-hover:underline">
+                                AGGIUNGI AL CARRELLO
+                                <span class="material-symbols-outlined text-sm" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-6 pt-2 bg-[#FDFCF0]/90 dark:bg-[#1A1A1A]/90 backdrop-blur-md shadow-[0_-5px_25px_rgba(74,14,14,0.05)] border-t border-[#4A0E0E]/5">
+<a class="flex flex-col items-center justify-center text-[#4A0E0E] dark:text-[#E5D5C5] border-t-2 border-[#4A0E0E] dark:border-[#B59410] pt-2 transition-transform duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] transition-colors duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="wine_bar">wine_bar</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Eventi</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] transition-colors duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="event_available">event_available</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Prenotazioni</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] transition-colors duration-300 active:scale-95" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person_outline">person_outline</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Profilo</span>
+</a>
+</nav>
+</body></html>

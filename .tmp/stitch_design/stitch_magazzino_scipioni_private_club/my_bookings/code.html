@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;500;700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#261900",
+                    "surface": "#fbf9f5",
+                    "outline-variant": "#dac1bf",
+                    "tertiary-fixed": "#e9e1dc",
+                    "on-primary-fixed-variant": "#77302d",
+                    "on-tertiary-fixed-variant": "#4b4642",
+                    "on-surface-variant": "#544341",
+                    "surface-container-high": "#eae8e4",
+                    "tertiary-container": "#282421",
+                    "surface-container": "#efeeea",
+                    "inverse-surface": "#30312e",
+                    "primary-container": "#4a0e0e",
+                    "tertiary": "#120f0d",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#ffb3ad",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#775a19",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e4e2de",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#1e1b18",
+                    "on-surface": "#1b1c1a",
+                    "secondary-container": "#fed488",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "on-primary-container": "#cc726d",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fbf9f5",
+                    "secondary-fixed": "#ffdea5",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdad7",
+                    "surface-container-low": "#f5f3ef",
+                    "surface-dim": "#dbdad6",
+                    "secondary-fixed-dim": "#e9c176",
+                    "surface-tint": "#954742",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "tertiary-fixed-dim": "#cdc5c0",
+                    "on-tertiary-container": "#918b86",
+                    "surface-bright": "#fbf9f5",
+                    "surface-container-highest": "#e4e2de",
+                    "on-primary-fixed": "#3d0506",
+                    "primary": "#2a0002",
+                    "outline": "#877270",
+                    "on-secondary-container": "#785a1a",
+                    "inverse-on-surface": "#f2f0ed",
+                    "on-background": "#1b1c1a",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "overlap-offset": "-40px",
+                    "container-max": "1280px",
+                    "margin-edge": "64px",
+                    "gutter": "32px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "label-caps": ["Manrope"],
+                    "display-xl": ["Noto Serif"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg": ["Noto Serif"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fbf9f5;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface selection:bg-secondary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-[#FDFCF0] dark:bg-[#1A1A1A] border-b border-[#4A0E0E]/10 dark:border-[#E5D5C5]/10 shadow-[0_10px_30px_-15px_rgba(74,14,14,0.08)]">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#4A0E0E] dark:text-[#E5D5C5] cursor-pointer hover:opacity-70 transition-opacity duration-500">menu</span>
+</div>
+<div class="flex flex-col items-center">
+<img alt="MAGAZZINO SCIPIONI" class="h-8 mb-1" data-alt="minimalist luxury brand logo for an upscale Italian wine cellar with refined serif typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHHbq0uYHVtmFLHoT8Xc2GdiOjqsrmBIQpRrEnQ0RYSrVb1bjqFvOp-4JEGxgyYU4gIU971w-KFPGtk6R2i0pC2P1jAZyaM7Zr332ZdiDuxuW2837VUEy5B50hEKus0sD8HYzn4RemrUXo2bKkUMKNeVcNY0bpy8lB9ZaTQ88ip6c0YBnMHhgbsr8X2boGgwWKP6l16PSauYI6RBAc3eTVc5veDdbpY8knkgNA6UOdhwN1UxM2qR45_rlh3gOODOQdGKuN2douETuW"/>
+<span class="font-noto-serif uppercase tracking-[0.3em] font-light text-[10px] text-[#4A0E0E] dark:text-[#E5D5C5]">MAGAZZINO SCIPIONI</span>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#4A0E0E] dark:text-[#E5D5C5] cursor-pointer hover:opacity-70 transition-opacity duration-500">account_circle</span>
+</div>
+</header>
+<main class="pt-32 pb-32 px-6 md:px-margin-edge max-w-container-max mx-auto min-h-screen">
+<!-- Header Section -->
+<section class="mb-12">
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Le Mie Prenotazioni</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Gestisci i tuoi tavoli e le degustazioni private riservate nel cuore del nostro caveau.</p>
+</section>
+<!-- Category Tabs -->
+<div class="flex gap-8 mb-12 border-b border-outline-variant/30">
+<button class="pb-4 font-label-caps text-label-caps text-primary border-b-2 border-primary transition-all">
+                IN PROGRAMMA
+            </button>
+<button class="pb-4 font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-all">
+                STORICO
+            </button>
+</div>
+<!-- Bookings Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Booking Card 1: Confermato -->
+<div class="group relative bg-surface-container-lowest p-8 shadow-[0_10px_30px_-15px_rgba(74,14,14,0.08)] flex flex-col md:flex-row gap-6 items-start transition-all duration-500 hover:shadow-[0_20px_40px_-20px_rgba(74,14,14,0.12)]">
+<div class="w-full md:w-32 h-32 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Interior of a luxury dimly lit wine cellar with oak barrels and soft golden spotlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOua35uYN24A8EspaKtTzaqD0FENJH3UAysM3hleaxXHJ4SwGxsYJOMS1g2ICImWTe_fRv-dpe0_T7ls3PcGevUFU2Z0WzFmqgg5J2mx9-ZcT76fwgNT9NruHvOQ95_lGt7PUHgK8bYMMhcOeisemoiYy9-YdSg2OxFd2p6fqK5Vx5ET4M8JvdGfzS9XB9-fazMT_A0gnLxsMfTVrMe0AqazCAeLQv04G3zTDkIda99dQpAJTXgwJ9YAjjsP_7ZJnYbdpSY7Na5iIC"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-caps text-[10px] tracking-widest text-secondary flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                            CONFERMATO
+                        </span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">#MS-8821</span>
+</div>
+<h3 class="font-headline-md text-2xl text-primary mb-2">Tavolo Privato Caveau</h3>
+<div class="grid grid-cols-2 gap-4 mt-6">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant mb-1">DATA</span>
+<span class="font-body-md text-on-surface">Venerdì, 24 Nov</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant mb-1">ORA</span>
+<span class="font-body-md text-on-surface">20:30</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant mb-1">OSPITI</span>
+<span class="font-body-md text-on-surface">4 Persone</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant mb-1">DETTAGLI</span>
+<a class="font-body-md text-primary underline underline-offset-4 decoration-outline-variant hover:decoration-secondary transition-colors" href="#">Vedi Nota</a>
+</div>
+</div>
+</div>
+<div class="absolute top-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary">more_vert</span>
+</div>
+</div>
+<!-- Booking Card 2: In Attesa -->
+<div class="group relative bg-surface-container-lowest p-8 shadow-[0_10px_30px_-15px_rgba(74,14,14,0.08)] flex flex-col md:flex-row gap-6 items-start transition-all duration-500 hover:shadow-[0_20px_40px_-20px_rgba(74,14,14,0.12)]">
+<div class="w-full md:w-32 h-32 overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a crystal wine glass being filled with deep red wine in a sophisticated dark setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz8bkJWCk_DIV_AOAyDsKs1R1kVMR1aA7h3ja4vSlsskU4QmhIkHLjQBMis5B2tOMvXQtzagb_E80234K_ZeRpe-xE6ofZkrKYhraLBFD-Cutbnj-4Xm6CU62nKkES3E1KzR7o6Y6nBiFl2wd2ECtZPP_odvZaB3MxxHe9_IiHeTS8Fjw0hwrwPFY8u82jC04Mv4AEOi8Nl2zPP2OkpTW7_fSI8AcwqeAzMYskkqmCSC1pLbOJNqiNhleWYWYAvLpCocQc3VfH-SVa"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-caps text-[10px] tracking-widest text-[#B59410] flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#B59410] animate-pulse"></span>
+                            IN ATTESA
+                        </span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">#MS-8944</span>
+</div>
+<h3 class="font-headline-md text-2xl text-primary mb-2">Degustazione "I Grandi Rossi"</h3>
+<div class="grid grid-cols-2 gap-4 mt-6">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant mb-1">DATA</span>
+<span class="font-body-md text-on-surface">Sabato, 02 Dic</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant mb-1">ORA</span>
+<span class="font-body-md text-on-surface">18:00</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant mb-1">OSPITI</span>
+<span class="font-body-md text-on-surface">2 Persone</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant mb-1">EVENTO</span>
+<span class="font-body-md text-on-surface">Sommelier Led</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Booking Card 3: Waitlist -->
+<div class="group relative bg-surface-container-lowest p-8 shadow-[0_10px_30px_-15px_rgba(74,14,14,0.08)] flex flex-col md:flex-row gap-6 items-start opacity-70 transition-all duration-500 hover:opacity-100">
+<div class="w-full md:w-32 h-32 overflow-hidden flex-shrink-0 grayscale">
+<img class="w-full h-full object-cover" data-alt="Modern minimalist restaurant interior with soft lighting and architectural lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDODHJ3pJUw85MXd6PQXpCVo2oQPhah2x6FMQFgwXK4yupC7LcKBOtFth74zE-4vaUFZhvk2s88WONnhLoQNkipD1mUdd-6mJgbAlO6GjbMjdYa5xtdpZpFsc_4ColeeKgONUwOx67SVwXglo__Ys3Eq_SU8VBERhse2o-qWPDu_erMKl4hujxLWO6-dWBj7TLtl7fiSStp3lhQmqWfCTCXJUFC2XlT2AaEIf4hYUGDhvlWT_7-EZJKPnsxesQqarFHK6J4SUDTSuiw"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-start mb-4">
+<span class="font-label-caps text-[10px] tracking-widest text-outline flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                            WAITLIST
+                        </span>
+<span class="font-label-caps text-[10px] text-on-surface-variant">#MS-9012</span>
+</div>
+<h3 class="font-headline-md text-2xl text-primary mb-2">Cena di Natale Aziendale</h3>
+<div class="grid grid-cols-2 gap-4 mt-6">
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant mb-1">DATA</span>
+<span class="font-body-md text-on-surface">Giovedì, 21 Dic</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[9px] text-on-surface-variant mb-1">POSIZIONE</span>
+<span class="font-body-md text-on-surface">#3 in Coda</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Help Section -->
+<div class="mt-section-gap py-12 px-8 border-t border-outline-variant/30 text-center">
+<h4 class="font-headline-md text-xl text-primary mb-4">Hai bisogno di assistenza?</h4>
+<p class="font-body-md text-on-surface-variant mb-8">Il nostro Concierge è a tua disposizione per modifiche o richieste speciali.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-primary-container text-on-primary py-4 px-10 font-label-caps text-label-caps hover:bg-primary transition-colors duration-300">
+                    CONTATTA IL CONCIERGE
+                </button>
+<button class="border border-secondary text-secondary py-4 px-10 font-label-caps text-label-caps hover:bg-secondary hover:text-white transition-all duration-300">
+                    TERMINI DI CANCELLAZIONE
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-6 pt-2 bg-[#FDFCF0]/90 dark:bg-[#1A1A1A]/90 backdrop-blur-md shadow-[0_-5px_25px_rgba(74,14,14,0.05)]">
+<div class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] dark:hover:text-[#E5D5C5] transition-colors duration-300 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif mt-1">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] dark:hover:text-[#E5D5C5] transition-colors duration-300 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined">wine_bar</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif mt-1">Eventi</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#4A0E0E] dark:text-[#E5D5C5] border-t-2 border-[#4A0E0E] dark:border-[#B59410] pt-2 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined">event_available</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif mt-1">Prenotazioni</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] dark:hover:text-[#E5D5C5] transition-colors duration-300 cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined">person_outline</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif mt-1">Profilo</span>
+</div>
+</nav>
+</body></html>

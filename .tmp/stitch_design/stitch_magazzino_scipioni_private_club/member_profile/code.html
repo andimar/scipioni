@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#261900",
+                    "surface": "#fbf9f5",
+                    "outline-variant": "#dac1bf",
+                    "tertiary-fixed": "#e9e1dc",
+                    "on-primary-fixed-variant": "#77302d",
+                    "on-tertiary-fixed-variant": "#4b4642",
+                    "on-surface-variant": "#544341",
+                    "surface-container-high": "#eae8e4",
+                    "tertiary-container": "#282421",
+                    "surface-container": "#efeeea",
+                    "inverse-surface": "#30312e",
+                    "primary-container": "#4a0e0e",
+                    "tertiary": "#120f0d",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#ffb3ad",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#775a19",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e4e2de",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#1e1b18",
+                    "on-surface": "#1b1c1a",
+                    "secondary-container": "#fed488",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "on-primary-container": "#cc726d",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fbf9f5",
+                    "secondary-fixed": "#ffdea5",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdad7",
+                    "surface-container-low": "#f5f3ef",
+                    "surface-dim": "#dbdad6",
+                    "secondary-fixed-dim": "#e9c176",
+                    "surface-tint": "#954742",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "tertiary-fixed-dim": "#cdc5c0",
+                    "on-tertiary-container": "#918b86",
+                    "surface-bright": "#fbf9f5",
+                    "surface-container-highest": "#e4e2de",
+                    "on-primary-fixed": "#3d0506",
+                    "primary": "#2a0002",
+                    "outline": "#877270",
+                    "on-secondary-container": "#785a1a",
+                    "inverse-on-surface": "#f2f0ed",
+                    "on-background": "#1b1c1a",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "overlap-offset": "-40px",
+                    "container-max": "1280px",
+                    "margin-edge": "64px",
+                    "gutter": "32px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "label-caps": ["Manrope"],
+                    "display-xl": ["Noto Serif"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg": ["Noto Serif"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fbf9f5;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #fbf9f5;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #4a0e0e;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-[#FDFCF0] dark:bg-[#1A1A1A] border-b border-[#4A0E0E]/10 dark:border-[#E5D5C5]/10 shadow-[0_10px_30px_-15px_rgba(74,14,14,0.08)]">
+<div class="flex items-center gap-4">
+<button class="text-[#4A0E0E] hover:opacity-70 transition-opacity duration-500">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="text-[#4A0E0E] font-noto-serif uppercase tracking-[0.2em] font-light text-xl tracking-[0.3em]">
+            MAGAZZINO SCIPIONI
+        </div>
+<div class="flex items-center">
+<button class="text-[#4A0E0E] hover:opacity-70 transition-opacity duration-500">
+<span class="material-symbols-outlined" data-icon="account_circle" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</button>
+</div>
+</header>
+<main class="pt-32 pb-40 px-6 max-w-[1280px] mx-auto min-h-screen">
+<!-- Profile Header Section -->
+<section class="flex flex-col md:flex-row items-center md:items-end gap-8 mb-20">
+<div class="relative group">
+<div class="w-48 h-48 rounded-full border border-secondary p-2 overflow-hidden bg-surface-container shadow-2xl">
+<img class="w-full h-full object-cover rounded-full grayscale hover:grayscale-0 transition-all duration-700" data-alt="portrait of a sophisticated middle-aged man in a dark tailored jacket, soft cinematic lighting, neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTudONM9IXr_h_EjXXg_O17zkY26W_IIx3RaLI57oLuN2GKoHCXTN8nS2JS2zioNZMcsQdK7XEvXAs6wnFOW_u1dy4lxYS251SYbttlL1mUnEYb0ed3qANDiUVCKpRHOj2tWX-OHQGs1bWQ47h1XzLohj0pkzbIdiB6vyfMGKC3iOR9e-GdBPjTP4SNEaYG9sQ_BzpSN6lxHqbksFii8jyG9F-fK8nM-tHKh6-PpQtqwZhN5ENLZk3FE3Dt5ndzECYWWG6PKOOw6cN"/>
+</div>
+<!-- The Sommelier Badge -->
+<div class="absolute -bottom-2 -right-2 bg-secondary text-surface w-16 h-16 rounded-full flex items-center justify-center border-4 border-background shadow-lg">
+<span class="material-symbols-outlined text-2xl" data-icon="wine_bar" style="font-variation-settings: 'FILL' 1;">wine_bar</span>
+</div>
+</div>
+<div class="text-center md:text-left flex-1">
+<span class="font-label-caps text-label-caps text-secondary mb-2 block tracking-[0.3em]">MEMBRO PRIVILEGIATO</span>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-1">Alessandro Visconti</h1>
+<div class="flex items-center justify-center md:justify-start gap-2 text-on-surface-variant font-body-md italic">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+                    Sommelier Member Since 2021
+                </div>
+</div>
+<div class="flex gap-4">
+<button class="px-8 py-3 bg-primary-container text-surface font-label-caps text-[10px] tracking-widest hover:bg-primary transition-colors duration-300">
+                    MODIFICA PROFILO
+                </button>
+</div>
+</section>
+<!-- Bento Grid Layout for Sections -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Informazioni Personali -->
+<div class="md:col-span-4 bg-surface-container-low p-10 border-l border-primary/10 flex flex-col gap-8 shadow-sm">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="info">info</span>
+<h2 class="font-headline-md text-2xl uppercase tracking-widest text-primary">Informazioni</h2>
+</div>
+<div class="space-y-6">
+<div>
+<label class="font-label-caps text-[10px] text-on-surface-variant block mb-1">EMAIL</label>
+<p class="font-body-lg text-primary">a.visconti@private.it</p>
+</div>
+<div>
+<label class="font-label-caps text-[10px] text-on-surface-variant block mb-1">TELEFONO</label>
+<p class="font-body-lg text-primary">+39 347 ••• ••89</p>
+</div>
+<div>
+<label class="font-label-caps text-[10px] text-on-surface-variant block mb-1">INDIRIZZO PREFERITO</label>
+<p class="font-body-lg text-primary">Via del Babuino, 114, Roma</p>
+</div>
+</div>
+</div>
+<!-- Il Tuo Palato (Preferences) -->
+<div class="md:col-span-8 bg-primary-container p-12 text-surface overflow-hidden relative">
+<!-- Decorative background image overlap -->
+<div class="absolute right-[-10%] bottom-[-10%] opacity-20 w-80 h-80">
+<img class="w-full h-full object-cover" data-alt="blurred background of wine bottles in a dark rustic cellar with ambient candle lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABJkQ92Nwryit19QtpCQR_QJwXAAkZADG2ow1BYTbtmyyQk_oxFy4Opu2vnM89oSb2BpNNLX_dq3_RRUyg6bRsdO_pSb9l2kjyyp7tVUitk-cFsRpyeXwiat9l0JHzOd4C8EpYo4NYtPZ8MzEMJ_lJaAeqIr18D6CR6mUvGMRJ3XrhX2V24kmL-rxPQKaLoDNmo2pMWqKh8Kwnf9cJdGdj5nSlY6_AgIAjLvYv0V50COJbN5VJlZgjQv3EahKLYIKi--wcZzA1zQue"/>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-12">
+<div>
+<span class="font-label-caps text-[10px] tracking-widest text-secondary mb-2 block">CURATED TASTE</span>
+<h2 class="font-headline-lg text-headline-md text-surface">Il Tuo Palato</h2>
+</div>
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="temp_preferences_custom">temp_preferences_custom</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+<div class="space-y-4">
+<h3 class="font-label-caps text-[11px] text-secondary border-b border-secondary/30 pb-2">VITIGNI PREFERITI</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2">
+<span class="font-body-md">Nebbiolo</span>
+<span class="text-secondary opacity-50">|</span>
+<span class="font-body-md">Sangiovese</span>
+<span class="text-secondary opacity-50">|</span>
+<span class="font-body-md">Chardonnay</span>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="font-label-caps text-[11px] text-secondary border-b border-secondary/30 pb-2">REGIONI</h3>
+<div class="flex flex-wrap gap-x-4 gap-y-2">
+<span class="font-body-md">Piemonte</span>
+<span class="text-secondary opacity-50">|</span>
+<span class="font-body-md">Toscana</span>
+<span class="text-secondary opacity-50">|</span>
+<span class="font-body-md">Bourgogne</span>
+</div>
+</div>
+<div class="sm:col-span-2">
+<h3 class="font-label-caps text-[11px] text-secondary border-b border-secondary/30 pb-2 mb-6">NOTE DI DEGUSTAZIONE RECENTI</h3>
+<p class="font-body-lg italic opacity-80 leading-relaxed max-w-2xl">
+                                "Predilige vini dalla struttura complessa, tannini levigati e una spiccata mineralità. Frequentemente orientato verso riserve d'annata del territorio toscano."
+                            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Privacy & Consensi -->
+<div class="md:col-span-12 bg-surface p-10 border border-primary/5 mt-8">
+<div class="flex items-center gap-3 mb-10">
+<span class="material-symbols-outlined text-primary" data-icon="admin_panel_settings">admin_panel_settings</span>
+<h2 class="font-headline-md text-2xl uppercase tracking-widest text-primary">Privacy &amp; Consensi</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-10">
+<div class="flex justify-between items-center group cursor-pointer border-b border-primary/5 pb-6">
+<div>
+<h4 class="font-label-caps text-sm text-primary mb-1">COMUNICAZIONI ESCLUSIVE</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Ricevi inviti per degustazioni private e release limitate.</p>
+</div>
+<div class="w-12 h-6 bg-secondary flex items-center px-1 rounded-full relative transition-colors duration-300">
+<div class="w-4 h-4 bg-surface rounded-full shadow-md ml-auto"></div>
+</div>
+</div>
+<div class="flex justify-between items-center group cursor-pointer border-b border-primary/5 pb-6">
+<div>
+<h4 class="font-label-caps text-sm text-primary mb-1">PROFILAZIONE PALATO</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Permetti all'AI Sommelier di suggerirti vini basati sui tuoi acquisti.</p>
+</div>
+<div class="w-12 h-6 bg-secondary flex items-center px-1 rounded-full relative transition-colors duration-300">
+<div class="w-4 h-4 bg-surface rounded-full shadow-md ml-auto"></div>
+</div>
+</div>
+<div class="flex justify-between items-center group cursor-pointer border-b border-primary/5 pb-6">
+<div>
+<h4 class="font-label-caps text-sm text-primary mb-1">CONDIVISIONE PARTNER</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Condividi dati con cantine partner per benefici esclusivi.</p>
+</div>
+<div class="w-12 h-6 bg-surface-variant flex items-center px-1 rounded-full relative transition-colors duration-300">
+<div class="w-4 h-4 bg-surface rounded-full shadow-md"></div>
+</div>
+</div>
+<div class="flex justify-between items-center group cursor-pointer border-b border-primary/5 pb-6">
+<div>
+<h4 class="font-label-caps text-sm text-primary mb-1">LOCALIZZAZIONE EVENTI</h4>
+<p class="font-body-md text-on-surface-variant text-sm">Ricevi notifiche quando sei vicino a uno dei nostri eventi.</p>
+</div>
+<div class="w-12 h-6 bg-secondary flex items-center px-1 rounded-full relative transition-colors duration-300">
+<div class="w-4 h-4 bg-surface rounded-full shadow-md ml-auto"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Logout Section -->
+<div class="md:col-span-12 flex justify-center pt-10">
+<button class="group flex items-center gap-4 text-primary font-label-caps tracking-[0.2em] py-4 px-12 border border-primary/20 hover:border-primary hover:bg-primary hover:text-surface transition-all duration-500">
+<span class="material-symbols-outlined text-xl" data-icon="logout">logout</span>
+                    LOGOUT DALLA SESSIONE
+                </button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-6 pt-2 bg-[#FDFCF0]/90 dark:bg-[#1A1A1A]/90 backdrop-blur-md shadow-[0_-5px_25px_rgba(74,14,14,0.05)] border-t border-[#4A0E0E]/5">
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] dark:hover:text-[#E5D5C5] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] dark:hover:text-[#E5D5C5] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="wine_bar">wine_bar</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Eventi</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] dark:hover:text-[#E5D5C5] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="event_available">event_available</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Prenotazioni</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E] dark:text-[#E5D5C5] border-t-2 border-[#4A0E0E] dark:border-[#B59410] pt-2 active:scale-95 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person_outline" style="font-variation-settings: 'FILL' 1;">person_outline</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Profilo</span>
+</a>
+</nav>
+<!-- Floating Branding Accent -->
+<div class="fixed right-10 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none opacity-20">
+<img alt="Magazzino Scipioni Logo" class="w-12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1o4OL56tfSgSfphBXvG3RIKSpn48fdHffEKL7eJDI7G41g-Kzwap8b8Gmef_T1CYH1ZYNTb_73Ow_gXGLmOG81UYtqQfYX4kS0X26zSpQmSu5WGcwgvTV6TXoJmafuIW2aboIGTfLNn3muld70An88XyC8SrBdCmDOzEgDaSB-WY46rqol0b7ALB6iJiQKXipI2yMjQY5iUy04laPgznScyjFuZAAJTVt9_Uy8E18HbmxdRuPjyeiO9DEk1V-1oWQjyD1XUda44Tg"/>
+</div>
+</body></html>

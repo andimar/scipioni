@@ -12,7 +12,21 @@ services:
     volumes: !reset []
     ports: !reset []
 
+  admin:
+    image: scipioni-admin:production
+    build:
+      context: .
+      dockerfile: infra/docker/admin/Dockerfile
+    environment:
+      NUXT_ADMIN_API_BASE: http://nginx/api/admin
+      NUXT_PUBLIC_ADMIN_API_BASE: https://api.example.com/api/admin
+      NUXT_PUBLIC_ADMIN_APP_NAME: Scipioni Staff Console
+    ports: !reset []
+
   mysql:
+    ports: !reset []
+
+  redis:
     ports: !reset []
 
   adminer:

@@ -33,6 +33,16 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
+        AdminUser::updateOrCreate(
+            ['email' => 'gestore@magazzinoscipioni.it'],
+            [
+                'name' => 'Scipioni Gestore',
+                'password' => Hash::make('password'),
+                'role' => 'staff',
+                'is_active' => true,
+            ]
+        );
+
         $category = EventCategory::updateOrCreate(
             ['slug' => 'degustazioni'],
             [

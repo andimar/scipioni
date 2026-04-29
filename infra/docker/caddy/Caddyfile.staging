@@ -11,3 +11,8 @@ api-staging.scipioni.brane.it {
     encode zstd gzip
     reverse_proxy nginx:80
 }
+
+admin-staging.scipioni.brane.it {
+    encode zstd gzip
+    reverse_proxy admin:3000
+}

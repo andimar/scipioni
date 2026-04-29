@@ -2,7 +2,7 @@
 
 ## Obiettivo
 
-Separare chiaramente sviluppo locale, staging e produzione per backend Laravel e demo/frontend web.
+Separare chiaramente sviluppo locale, staging e produzione per backend Laravel, demo/frontend web e nuovo backoffice admin Nuxt.
 
 ## File di configurazione
 
@@ -55,6 +55,11 @@ Frontend demo:
 - [staging.conf](/C:/dev/scipioni/infra/docker/frontend-demo/staging.conf)
 - [production.conf](/C:/dev/scipioni/infra/docker/frontend-demo/production.conf)
 
+Admin Nuxt:
+
+- [infra/docker/admin/Dockerfile](/C:/dev/scipioni/infra/docker/admin/Dockerfile)
+- [docs/admin-architecture.md](/C:/dev/scipioni/docs/admin-architecture.md)
+
 Nei file Nginx si definiscono soprattutto:
 
 - `server_name`
@@ -67,11 +72,13 @@ Esempio staging:
 
 - frontend: `staging.scipioni.brane.it`
 - api: `api-staging.scipioni.brane.it`
+- admin: `admin-staging.scipioni.brane.it`
 
 Esempio produzione:
 
 - frontend: `app.example.com`
 - api: `api.example.com`
+- admin: `admin.example.com`
 
 Sostituisci questi placeholder con i domini reali del progetto.
 
@@ -81,6 +88,12 @@ Staging:
 
 ```bash
 docker compose -f docker-compose.yml -f docker-compose.staging.yml up -d
+```
+
+Per includere anche il backoffice admin:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.staging.yml up -d --build admin
 ```
 
 Per il bootstrap staging completo con rebuild, migrazioni e dati demo:
@@ -101,6 +114,12 @@ Produzione:
 
 ```bash
 docker compose -f docker-compose.yml -f docker-compose.production.yml up -d
+```
+
+Per includere anche il backoffice admin:
+
+```bash
+docker compose -f docker-compose.yml -f docker-compose.production.yml up -d --build admin
 ```
 
 ## Nota importante

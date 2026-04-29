@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="it"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed": "#261900",
+                    "surface": "#fbf9f5",
+                    "outline-variant": "#dac1bf",
+                    "tertiary-fixed": "#e9e1dc",
+                    "on-primary-fixed-variant": "#77302d",
+                    "on-tertiary-fixed-variant": "#4b4642",
+                    "on-surface-variant": "#544341",
+                    "surface-container-high": "#eae8e4",
+                    "tertiary-container": "#282421",
+                    "surface-container": "#efeeea",
+                    "inverse-surface": "#30312e",
+                    "primary-container": "#4a0e0e",
+                    "tertiary": "#120f0d",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#ffb3ad",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#775a19",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e4e2de",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#1e1b18",
+                    "on-surface": "#1b1c1a",
+                    "secondary-container": "#fed488",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "on-primary-container": "#cc726d",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#fbf9f5",
+                    "secondary-fixed": "#ffdea5",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdad7",
+                    "surface-container-low": "#f5f3ef",
+                    "surface-dim": "#dbdad6",
+                    "secondary-fixed-dim": "#e9c176",
+                    "surface-tint": "#954742",
+                    "primary-fixed-dim": "#ffb3ad",
+                    "tertiary-fixed-dim": "#cdc5c0",
+                    "on-tertiary-container": "#918b86",
+                    "surface-bright": "#fbf9f5",
+                    "surface-container-highest": "#e4e2de",
+                    "on-primary-fixed": "#3d0506",
+                    "primary": "#2a0002",
+                    "outline": "#877270",
+                    "on-secondary-container": "#785a1a",
+                    "inverse-on-surface": "#f2f0ed",
+                    "on-background": "#1b1c1a",
+                    "error": "#ba1a1a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "overlap-offset": "-40px",
+                    "container-max": "1280px",
+                    "margin-edge": "64px",
+                    "gutter": "32px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Noto Serif"],
+                    "label-caps": ["Manrope"],
+                    "display-xl": ["Noto Serif"],
+                    "body-lg": ["Manrope"],
+                    "headline-lg": ["Noto Serif"],
+                    "body-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "display-xl": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-vertical {
+            writing-mode: vertical-rl;
+        }
+        .glass-header {
+            backdrop-filter: blur(12px);
+            background: rgba(253, 252, 240, 0.8);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation (Shell suppressed for Task-Focused screen but maintained contextually as per prompt hierarchy) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-[#FDFCF0] dark:bg-[#1A1A1A] text-[#4A0E0E] dark:text-[#E5D5C5] border-b border-[#4A0E0E]/10 dark:border-[#E5D5C5]/10 shadow-[0_10px_30px_-15px_rgba(74,14,14,0.08)]">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-70 transition-opacity duration-500">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+</div>
+<div class="font-noto-serif uppercase tracking-[0.3em] text-xl font-medium">
+            MAGAZZINO SCIPIONI
+        </div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-70 transition-opacity duration-500">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-32">
+<!-- Hero Section -->
+<section class="relative h-[707px] w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up of fine champagne bubbles rising in a crystal flute against a dark, moody cellar background with golden highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSoSCphJJCVjXW9kE1kXHSCpooAHdWAvVRIGejiEJUJzBgFdVBBioa7LURDxQa4AQUAjRZ6ZNJhAMMlP_1cYQS_R1nchSKPUpS8DwbiQrj4VTZ9a9v6n2i-VUVZBeYtrKLH0MTbhkuLDTNQBdIau8py1Auw7sIkHE0aoXnspSM7jNfhzcUuEMUt9NZdXVaNDlmff8ll7ell0YSYwzwQyqC-U1vtgwAOlKJung_gguJWFLHhXEcARhjdYwmzqm1CWHVPZpi0WmRt3gK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-margin-edge text-surface">
+<p class="font-label-caps text-label-caps uppercase text-secondary mb-4 tracking-widest">Esperienza Esclusiva</p>
+<h1 class="font-display-xl text-headline-lg md:text-display-xl mb-2">Notte di Perlage</h1>
+<p class="font-headline-md text-body-lg italic opacity-90 max-w-2xl">Un viaggio sensoriale tra le migliori maison francesi e l'eccellenza del territorio italiano.</p>
+</div>
+</section>
+<div class="max-w-container-max mx-auto px-margin-edge">
+<!-- Event Data Grid -->
+<section class="mt-overlap-offset relative z-10 grid grid-cols-2 md:grid-cols-4 gap-gutter bg-surface-container-lowest p-8 shadow-[0_20px_50px_rgba(74,14,14,0.05)]">
+<div class="flex flex-col border-r border-outline-variant/30 pr-4">
+<span class="font-label-caps text-label-caps text-secondary mb-2">DATA</span>
+<span class="font-headline-md text-body-lg text-primary">24 Novembre</span>
+</div>
+<div class="flex flex-col border-r border-outline-variant/30 pr-4">
+<span class="font-label-caps text-label-caps text-secondary mb-2">ORARIO</span>
+<span class="font-headline-md text-body-lg text-primary">20:30</span>
+</div>
+<div class="flex flex-col border-r border-outline-variant/30 pr-4">
+<span class="font-label-caps text-label-caps text-secondary mb-2">PREZZO</span>
+<span class="font-headline-md text-body-lg text-primary">€85</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-secondary mb-2">DISPONIBILITÀ</span>
+<span class="flex items-center gap-2 font-headline-md text-body-lg text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        12 Posti Rimasti
+                    </span>
+</div>
+</section>
+<!-- Storytelling Section -->
+<section class="mt-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-1 hidden md:block">
+<span class="text-vertical font-label-caps text-label-caps text-outline-variant tracking-[0.5em] mt-8 uppercase">SCIPIONI EXPERIENCE</span>
+</div>
+<div class="md:col-span-7 space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">L'arte del sollevare <br/>il calice al cielo.</h2>
+<div class="font-body-lg text-on-surface-variant space-y-6 leading-relaxed text-justify">
+<p>
+                            Benvenuti a una serata dedicata all'effervescenza più pura. <strong>Notte di Perlage</strong> non è semplicemente una degustazione, ma un'esplorazione curata dei territori dove il vino si fa anima attraverso la bollicina. Nelle profondità del nostro caveau, tra mattoni a vista e luci soffuse, guideremo i vostri sensi attraverso un percorso narrativo unico.
+                        </p>
+<p>
+                            La serata inizierà con una selezione di Blanc de Blancs d'eccezione, scelti personalmente dal nostro sommelier per la loro mineralità vibrante. Proseguiremo il viaggio con tre diverse declinazioni di metodo classico italiano, scoprendo come l'altitudine e il terreno vulcanico possano influenzare la persistenza del perlage.
+                        </p>
+<p>
+                            Ogni sorso sarà accompagnato da una narrazione che intreccia storia, terroir e tecnica di cantina, trasformando una serata conviviale in un arricchimento culturale profondo. La nostra filosofia al Magazzino Scipioni è quella di celebrare il tempo: quello necessario per l'affinamento sui lieviti e quello che deciderete di dedicarvi stasera.
+                        </p>
+</div>
+</div>
+<div class="md:col-span-4 relative">
+<div class="sticky top-28 p-8 border border-secondary/20 bg-surface-container-low">
+<img class="w-full aspect-[3/4] object-cover mb-8" data-alt="Interior of a luxury wine cellar with rows of aged bottles on wooden racks, lit by warm candlelight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOSve8n2Tx5I0Tey8jNKtH_xcNMSJLVVjJSpU5ISzHjwjHof2zkQ7yy6frxLy_bwr-0-yaD4wRSnQ8A3XJe14TIqEkleva_UVBj4vaXuvSo73R01s2NSvcwmi10fg4KRCbTJrbu5TFnmxu5EwMOOyGFuScCBQKbR9Vn0oYcv-JYq-LtLlPe7XaSmXuPdcvJCzK7pHUCm_sqJvG_69lxaeEDoPUCgRm80ogDcVcF2UwnThed025j_Mfc9D6ZhiTLRj1lID9_fETjh1A"/>
+<h3 class="font-headline-md text-body-lg text-primary mb-4">Incluso nell'evento</h3>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary" data-icon="wine_bar">wine_bar</span>
+<span class="font-body-md">Degustazione di 5 Etichette Rare</span>
+</li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-body-md">Finger food gourmet in abbinamento</span>
+</li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary" data-icon="school">school</span>
+<span class="font-body-md">Masterclass guidata dal Sommelier</span>
+</li>
+<li class="flex items-center gap-4 text-on-surface">
+<span class="material-symbols-outlined text-secondary" data-icon="menu_book">menu_book</span>
+<span class="font-body-md">Libretto delle note di degustazione</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="mt-section-gap mb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div>
+<span class="font-label-caps text-label-caps text-secondary block mb-4 uppercase">DOVE TROVARCI</span>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Un rifugio nel cuore <br/>di Roma.</h2>
+<p class="font-body-md text-on-surface-variant mb-8">
+                            Via degli Scipioni, 30<br/>
+                            00192 Roma RM, Italia
+                        </p>
+<div class="h-64 bg-surface-container-highest w-full relative overflow-hidden group">
+<img class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist map view of Rome neighborhood with architectural sketches" data-location="Rome, Italy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDca4KtIB6ClD859k0gq9M-kLkV6YygrKCTGWIICbs91iIunPScqyq2HWnSV9exBYVEI05W7easBIuF6Q1MN_vxGo6x894dQ52n0ptIYA_eYvRZ3iUa8xHrIeXkluOYSvpHCDHFNaN8nFTxj-0x320vLcqlLRB5N16dxOPM35q7XhFDNHK0wFHbyKmYcCIWT24w2SMfqSKj4a9outyv00WbXacv35V6aJDwzjacExMF3-AgTPumBfdTxjD1GjaVoPUnTYUOXC-WD9b2"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-4 h-4 bg-primary rounded-full shadow-[0_0_0_8px_rgba(74,14,14,0.1)]"></div>
+</div>
+</div>
+</div>
+<div class="relative pt-12 md:pt-0">
+<img class="w-full aspect-square object-cover" data-alt="Elegant table setting in a dimly lit wine bar with white tablecloth and sparkling crystal glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz1fx0NB_cEw3FLBgf7PL2y7PyhZTS8hTcXbUyx1d7B_G4b6dRMiXiMn5U06RzFC64wpQGMhU8Hd948MrkIBZw7pd0EmvkjP3UUALk_7VqUpRhSppjRt0uQUGSdia6X2b-0Unf7CzQY0CsZLrHHTB9atDzPujhp3sWlDC1YrNshJMSBmpNum1xiZUaVYOcABCIhEjzd1WsEHmAQJ8aPs6pr9uh7o3TKiaSZRqdqMBiLmw-AfGkJ9Zb7dKarjnHb574VPjm9CKPrUrg"/>
+<div class="absolute -bottom-8 -left-8 bg-primary p-8 hidden md:block">
+<img alt="Magazzino Scipioni Logo" class="h-12 w-auto invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkdzBnfFbO7NQktRHjY0BiQXHjdeMWzt-r_Evar5dL-aL9n5cb-xlZJz6Hvf4wEyneV5EouIbsd0WGGIYt5v_UrhA1Gs4n2ooCLpOsfInYgebC0quT1OyX-aGvYFYBaDUBf1bUPNRZRORgdCtAlflUoP1n8uPbgEGjRrMR4ofq36Hw5WHFbwIp0Rxd647q22T1R6RCqqlzxunn-J1FYu0VCd9tdeHoHPh8h_otdV8iUXswJCcVhxXFNQJZQ-GxNXdxdS9Ix-GGV65y"/>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Sticky CTA -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/20 px-6 py-4 flex justify-between items-center md:px-margin-edge">
+<div class="hidden md:block">
+<span class="font-label-caps text-label-caps text-secondary block">PREZZO PER PERSONA</span>
+<span class="font-headline-md text-headline-md text-primary">€85,00</span>
+</div>
+<button class="w-full md:w-auto bg-primary text-surface font-label-caps text-label-caps px-12 py-5 uppercase tracking-[0.2em] hover:bg-secondary transition-colors duration-500 shadow-xl">
+            PRENOTA ORA
+        </button>
+</div>
+<!-- Bottom Navigation Cluster (Hybrid as per Shared Components JSON) -->
+<nav class="hidden md:flex fixed bottom-8 left-1/2 -translate-x-1/2 z-50 bg-[#FDFCF0]/90 dark:bg-[#1A1A1A]/90 backdrop-blur-md px-8 py-4 gap-8 shadow-[0_-5px_25px_rgba(74,14,14,0.05)] rounded-full items-center">
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E] dark:text-[#E5D5C5] border-t-2 border-[#4A0E0E] dark:border-[#B59410] pt-2" href="#">
+<span class="material-symbols-outlined" data-icon="wine_bar">wine_bar</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Eventi</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Prenotazioni</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4A0E0E]/40 dark:text-[#E5D5C5]/40 pt-2 hover:text-[#4A0E0E] transition-colors duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="person_outline">person_outline</span>
+<span class="text-[10px] font-medium uppercase tracking-widest font-noto-serif">Profilo</span>
+</a>
+</nav>
+</body></html>

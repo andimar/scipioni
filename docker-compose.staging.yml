@@ -20,3 +20,11 @@ services:
       - ./infra/docker/frontend-demo/staging.conf:/etc/nginx/conf.d/default.conf:ro
     ports:
       - "8090:80"
+
+  admin:
+    environment:
+      NUXT_ADMIN_API_BASE: http://nginx/api/admin
+      NUXT_PUBLIC_ADMIN_API_BASE: https://api-staging.scipioni.brane.it/api/admin
+      NUXT_PUBLIC_ADMIN_APP_NAME: Scipioni Staff Console
+    ports:
+      - "8092:3000"
